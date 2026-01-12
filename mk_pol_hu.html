@@ -1,306 +1,339 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adatvédelmi irányelvek – AI Chat App</title>
+    <title>IMIKI AI Adatvédelmi Irányelv</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'DejaVu Sans', sans-serif;
+        }
+        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
             color: #333;
-            background-color: #f9f9f9;
+            background-color: #f8f9fa;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
         }
-        .container {
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #2c3e50;
+        
+        header {
             text-align: center;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 10px;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e0e0e0;
         }
-        h2 {
-            color: #34495e;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            border-left: 4px solid #3498db;
-            padding-left: 15px;
-        }
-        h3 {
-            color: #2c3e50;
-            margin-top: 25px;
+        
+        h1 {
+            color: #1a237e;
+            font-size: 2.2rem;
             margin-bottom: 10px;
         }
-        p {
+        
+        h2 {
+            color: #283593;
+            font-size: 1.6rem;
+            margin-top: 30px;
             margin-bottom: 15px;
-            text-align: justify;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e0e0e0;
         }
+        
+        h3 {
+            color: #3949ab;
+            font-size: 1.3rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .last-updated {
+            color: #666;
+            font-style: italic;
+            text-align: right;
+            margin-top: 10px;
+        }
+        
+        .chapter {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+        
+        .section {
+            margin-bottom: 20px;
+        }
+        
+        .section-title {
+            font-weight: bold;
+            color: #444;
+            margin-bottom: 8px;
+        }
+        
         ul, ol {
-            margin-bottom: 15px;
             padding-left: 25px;
+            margin-bottom: 15px;
         }
+        
         li {
             margin-bottom: 8px;
         }
-        .definition {
-            background-color: #ecf0f1;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 15px 0;
-        }
-        .important {
-            background-color: #fff3cd;
-            border: 1px solid #ffeaa7;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 15px 0;
-        }
-        .contact-info {
-            background-color: #e8f5e8;
-            padding: 15px;
-            border-radius: 5px;
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
             margin: 20px 0;
-            border-left: 4px solid #27ae60;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
-        .footer {
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #f1f5fd;
+            color: #1a237e;
+            font-weight: 600;
+        }
+        
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+        
+        a {
+            color: #3949ab;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .highlight {
+            background-color: #fffde7;
+            padding: 15px;
+            border-left: 4px solid #ffd600;
+            margin: 20px 0;
+        }
+        
+        .contact-info {
+            background-color: #e8f5e9;
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 20px;
+        }
+        
+        footer {
             text-align: center;
             margin-top: 40px;
             padding-top: 20px;
-            border-top: 1px solid #bdc3c7;
-            color: #7f8c8d;
-            font-size: 14px;
+            border-top: 1px solid #e0e0e0;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .compliance-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .badge {
+            background-color: #e8eaf6;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            color: #3949ab;
+        }
+        
+        .hungarian-note {
+            background-color: #f0f7ff;
+            border-left: 4px solid #0056b3;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .chapter {
+                padding: 15px;
+            }
+            
+            table {
+                display: block;
+                overflow-x: auto;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Adatvédelmi irányelvek</h1>
-
-        <p>Az IMIKI AI ("mi", "mienk" vagy "nekünk") elkötelezett az Ön adatainak védelme mellett. Ez az Adatvédelmi irányelvek magyarázza el, hogyan gyűjt, használ és tárol az IMIKI AI személyes információkat az AI Chat alkalmazáshoz.</p>
-
-        <p>Ez az Adatvédelmi irányelvek a weboldalunkra és a hozzá tartozó aldomainekre (együttesen "Szolgáltatásunk") vonatkozik, valamint az AI Chat alkalmazásunkra. A Szolgáltatásunk elérésével vagy használatával Ön tudomásul veszi, hogy elolvasta, megértette, és elfogadja személyes információinak gyűjtését, tárolását, felhasználását és nyilvánosságra hozatalát az itt leírtak és a Felhasználási feltételeink szerint.</p>
-
-        <h2>Meghatározások és kulcsfogalmak</h2>
-        <p>Hogy a lehető legvilágosabban magyarázhassuk el ezeket a fogalmakat ebben az Adatvédelmi irányelvekben, a következő kifejezések szigorúan meghatározott jelentéssel bírnak:</p>
-
-        <div class="definition">
-            <ul>
-                <li><strong>Süti (Cookie):</strong> A webhely által generált és a böngésző által elmentett kis adatmennyiség. A böngésző azonosítására, analitikára és információk (pl. nyelvi beállítás, bejelentkezési adatok) megjegyzésére szolgál.</li>
-                <li><strong>Cég:</strong> Amikor ez az irányelv a "Cég", "mi", "minket" vagy "a miénk" kifejezést használja, az az IMIKI AI-ra utal, amely felelős az Ön információiért ezek szerint az Adatvédelmi irányelvek szerint.</li>
-                <li><strong>Ország:</strong> Az a hely, ahol az AI Chat vagy tulajdonosai/alapítói működnek, jelen esetben Románia.</li>
-                <li><strong>Ügyfél:</strong> Az a cég, szervezet vagy személy, amely regisztrál az AI Chat Plus Szolgáltatás használatára, hogy kezelhesse kapcsolatait a fogyasztókkal vagy szolgáltatásfelhasználókkal.</li>
-                <li><strong>Eszköz:</strong> Bármilyen internethoz kapcsolódó eszköz, mint telefon, tablet, számítógép vagy bármely más eszköz, amellyel felkereshető az AI Chat és használhatók a szolgáltatások.</li>
-                <li><strong>IP-cím:</strong> Minden internethez csatlakoztatott eszköz kap egy számot, az ún. internetprotokoll (IP) címet. Ezek a számok általában földrajzi blokkokban kerülnek kiosztásra. Egy IP-cím gyakran azonosítani tudja azt a helyet, ahonnan az eszköz csatlakozik az internethez.</li>
-                <li><strong>Személyzet:</strong> Azokat az egyéneket jelenti, akiket az AI Chat alkalmaz, vagy akikkel szerződés alapján áll kapcsolatban, hogy valamelyik fél nevében szolgáltatásokat végezzenek.</li>
-                <li><strong>Személyes adat:</strong> Bármely olyan információ, amely közvetlenül, közvetve vagy más információkkal összefüggésben – beleértve a személyi azonosító számot – lehetővé teszi egy természetes személy azonosítását vagy azonosíthatóságát.</li>
-                <li><strong>Szolgáltatás:</strong> Az AI Chat által nyújtott szolgáltatásra utal, ahogyan az a vonatkozó feltételekben (ha rendelkezésre áll) és ezen a platformon le van írva.</li>
-                <li><strong>Ön:</strong> Olyan személy vagy jogi személy, aki regisztrált az AI Chat szolgáltatásainak használatára.</li>
-            </ul>
+    <header>
+        <h1>IMIKI AI Adatvédelmi Irányelv</h1>
+        <p>Hatálybalépés dátuma: 2025. december 31.</p>
+    </header>
+    
+    <main>
+        <div class="hungarian-note">
+            <strong>Fontos információ magyar felhasználók számára:</strong> Ez az adatvédelmi irányelv megfelel az Európai Unió Általános Adatvédelmi Rendeletének (GDPR), valamint a magyar adatvédelmi törvények követelményeinek.
         </div>
-
-        <h2>Automatikusan gyűjtött információk</h2>
-        <p>Bizonyos információk, mint például az Internet Protokoll (IP) címe és/vagy böngészője és eszköze jellemzői automatikusan gyűlnek, amikor felkeresi platformunkat. Ez az információ arra szolgál, hogy számítógépét összekapcsolja az internettel. További automatikusan gyűjtött információk lehetnek: bejelentkezési név, e-mail cím, jelszó, számítógép- és kapcsolati információk (pl. böngészőbővítmények típusai és verziói, időzóna-beállítások), operációs rendszerek és platformok, vásárlási előzmények (néha összesítjük más felhasználók hasonló információival), a teljes Uniform Resource Locator (URL) kattintásfolyam a weboldalunkra, azon keresztül és onnan, beleértve a dátumot és időt; süti szám; a webhely azon részei, amelyeket megtekintett vagy keresett; valamint a telefonszám, amelyen ügyfélszolgálatunkat hívta.</p>
-
-        <p>Használhatunk böngészőadatokat is, például sütiket, Flash sütiket (más néven Flash Local Shared Objects) vagy hasonló adatokat weboldalunk bizonyos részein csalásmegelőzés és egyéb célokból. Látogatásai során szoftvereszközöket, például JavaScriptet használhatunk a munkamenet-információk (beleértve az oldalválaszidőket, letöltési hibákat, bizonyos oldalakra fordított látogatási időt, oldalinterakciós információkat (például görgetés, kattintások, egérralátételek) és az oldalról való elnavigálás módját) mérésére és gyűjtésére. Technikai információkat is gyűjthetünk, hogy segítsen azonosítani eszközét csalásmegelőzési és diagnosztikai célokból.</p>
-
-        <div class="important">
-            <p><strong>Fontos tudnivaló:</strong> Automatikusan gyűjtünk bizonyos információkat, amikor felkeresi, használja vagy navigál a platformon. Ez az információ nem tárja fel konkrét személyazonosságát (például nevét vagy elérhetőségét), de tartalmazhatja az eszköz- és használati információkat, például IP-címét, böngésző- és eszközjellemzőit, operációs rendszerét, nyelvi beállításait, hivatkozó URL-eket, eszköznévét, országát, helyét, információkat arról, hogy ki és mikor használja szolgáltatásainkat, valamint egyéb technikai információkat. Ezek az információk elsősorban a platformunk biztonságának és működésének fenntartásához, valamint belső elemzési és jelentéskészítési céljainkhoz szükségesek.</p>
+        
+        <div class="chapter">
+            <h2>1. Fejezet: Általános rendelkezések</h2>
+            
+            <div class="section">
+                <div class="section-title">1.1 [Alkotás alapja]</div>
+                <p>Ezt az Irányelvet az Európai Unió Általános Adatvédelmi Rendelete (GDPR), a Kaliforniai Fogyasztói Adatvédelmi Törvény (CCPA/CPRA), a Kínai Népköztársaság Személyes Adatok Védelméről szóló törvénye, valamint az értékesítési régiókban (Európa, Egyesült Államok) érvényes egyéb releváns adatvédelmi rendeletek alapján hoztuk létre. Célja, hogy egyértelművé tegye az Ön személyes adatainak feldolgozásának szabályait általunk és partnereink által, biztosítva az Ön információs jogait és érintett jogait.</p>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">1.2 Alkalmazási terület</div>
+                <p>Ez az Irányelv az Ön Okos Kamerás Szemüveg (a továbbiakban: "Okos Szemüveg") és a hozzá tartozó APP (a továbbiakban: "ez az APP") használatának teljes folyamatára vonatkozik. Elsődlegesen az "AI Interakciós Információ Feltöltés" forgatókönyvet fedi le. Az Ön által az Okos Szemüveggel rögzített fényképek, hang- és videofájlok alapértelmezés szerint helyileg a szemüvegen vagy a párosított telefonon tárolódnak; mi nem gyűjtjük és nem töltjük fel aktívan azokat. Személyes adatok csak akkor kerülnek átadásra harmadik fél AI szervereinek, ha az szükséges az Ön által aktivált specifikus intelligens szolgáltatások (például AI kérdések és válaszok, képfelismerés, többnyelvű fordítása) nyújtásához.</p>
+            </div>
         </div>
-
-        <h2>Személyes adatok gyűjtése és módszere</h2>
-        <p>Az AI Chat feldolgozhatja személyes adatait az ebben az Adatvédelmi irányelvekben meghatározott célokra. Az AI Chat App által gyűjtött és felhasznált felhasználói személyes adatok különösen a következők: telefonszám, amelyet akkor kapunk meg, amikor kapcsolatba lép az AI Chat App-pal, valamint a reklámozók számára kijelölt azonosító a szolgáltatásaink eléréséhez használt mobileszközében (The Identifier for Advertisers – IDFA), az értékesítők/fejlesztők számára kijelölt azonosító a mobileszközében (The Identifier for Vendors – IDVF) és az Internet Protokoll cím (IP-cím).</p>
-
-        <h3>Adatkategóriák és adattípusok</h3>
-        <ul>
-            <li><strong>Kapcsolattartási információk:</strong> Telefonszám, e-mail cím</li>
-            <li><strong>Folyamatbiztonság:</strong> Internetes forgalmi adatok (hálózati mozgások, IP-cím, látogatási adatok, idő- és dátuminformációk), eszköznév, alkalmazáson belüli vásárlási előzmények, a reklámozók számára kijelölt azonosító a szolgáltatásaink eléréséhez használt mobileszközében (ha engedélyt ad, az IDFA), az értékesítők/fejlesztők számára kijelölt azonosító a mobileszközében (IDVF)</li>
-        </ul>
-
-        <p>A fent említett adatait közvetlenül Öntől gyűjthetjük elektronikus vagy fizikai adathordozókon, mobil eszközén, harmadik féltől származó alkalmazásokon vagy harmadik féltől származó forrásokon keresztül, amelyeken keresztül hozzáférhet alkalmazásunkhoz, mint például az Apple App Store, a Google Play App Store, az Amazon App Store (hasonló platformok együtt az "App Store-ok"), jogi kötelezettségek betartása, szolgáltatásaink fejlesztése, szolgáltatásaink használatának adminisztrálása, valamint az Ön számára a szolgáltatásaink könnyű használatának és élvezetének biztosítása céljából.</p>
-
-        <p>Gyűjthetjük a naplóadatokat (Log Data), amelyek a szolgáltatásaink/alkalmazásaink használata során keletkeznek (saját termékeinken vagy harmadik féltől származó termékeken keresztül). Ezek a naplóadatok tartalmazhatnak olyan információkat, mint eszköze Internet Protokoll ("IP") címe, eszköznév, operációs rendszer verziója, az alkalmazás konfigurációja a szolgáltatásunk/alkalmazásunk használata során, a szolgáltatás/alkalmazás használatának időpontja/dátuma és egyéb statisztikák.</p>
-
-        <h2>Hogyan használjuk fel információit</h2>
-        <p>Információit különböző üzleti célokra használjuk, beleértve szolgáltatásaink nyújtását, adminisztratív célokat, valamint termékeink és szolgáltatásaink marketingjét, az alábbiak szerint.</p>
-
-        <h3>Szolgáltatásaink nyújtása</h3>
-        <p>Információit arra használjuk, hogy teljesítsük Önnel kötött szerződésünket, és nyújtsuk szolgáltatásainkat, például:</p>
-        <ol>
-            <li>Válaszokat szolgáltassunk szöveges üzeneteire és keresési lekérdezéseire, valamint más hasonló szolgáltatásokat;</li>
-            <li>Kezeljük információit és fiókjait;</li>
-            <li>Hozzáférést biztosítsunk szolgáltatásaink bizonyos területeihez, funkcióihoz és jellemzőihez;</li>
-            <li>Válaszoljunk az ügyfélszolgálati vagy műszaki támogatási kérelmekre;</li>
-            <li>Kommunikáljunk Önnel fiókjával, szolgáltatásainkon végzett tevékenységeivel és az irányelv változásaival kapcsolatban; és</li>
-            <li>Feldolgozzuk pénzügyi információit és egyéb fizetési módjait a megvásárolt termékek vagy szolgáltatásokért.</li>
-        </ol>
-
-        <h3>Adminisztratív célok</h3>
-        <p>Információit különböző adminisztratív célokra használjuk, például:</p>
-        <ol>
-            <li>Legitim érdekeink követése, mint például a közvetlen marketing, kutatás és fejlesztés (beleértve a marketingkutatást), hálózati- és információbiztonság, valamint csalásmegelőzés;</li>
-            <li>Biztonsági események észlelése, védekezés a rosszindulatú, megtévesztő, csalárd vagy illegális tevékenységek ellen, valamint az ezekért felelősök bírósági eljárás alá vonása;</li>
-            <li>Érdeklődés és részvétel mérése szolgáltatásainkban;</li>
-            <li>Rövid távú, átmeneti használat, például a reklámok környezetfüggő testreszabása;</li>
-            <li>Szolgáltatásaink javítása, frissítése vagy fejlesztése;</li>
-            <li>Új funkciók és szolgáltatások fejlesztése;</li>
-            <li>Belső minőségbiztosítás és biztonság biztosítása;</li>
-            <li>Hibakeresés a szolgáltatásaink hibáinak azonosítása és javítása érdekében;</li>
-        </ol>
-
-        <h3>Termékeink és szolgáltatásaink marketingje és hirdetése</h3>
-        <p>Felhasználhatjuk személyes információit tartalmak és hirdetések testreszabására és Önnek történő szolgáltatására. Ezeket az anyagokat az Ön számára a vonatkozó jogszabályoknak megfelelően biztosíthatjuk. A marketing néhány módja lehet: e-mail kampányok, egyéni célközönségre szóló hirdetés, valamint "érdeklődésalapú" vagy "személyre szabott hirdetés", beleértve a több eszközön történő követést.</p>
-
-        <div class="important">
-            <p>Ha kérdése van marketing gyakorlatunkkal kapcsolatban, vagy ha nem kívánja, hogy személyes információit marketing célokra használjuk, bármikor kapcsolatba léphet velünk az alábbi 15. szakaszban megadottak szerint.</p>
+        
+        <div class="chapter">
+            <h2>2. Fejezet: Személyes adatok feldolgozási szabályai AI interakciós forgatókönyvekhez</h2>
+            
+            <div class="section">
+                <div class="section-title">2.1 Információgyűjtés hatóköre és célja (Minimális szükségesség elve)</div>
+                <p>Csak akkor továbbítunk megfelelő információkat harmadik fél AI szervereinek, amikor Ön aktívan aktiválja a következő intelligens funkciókat. Ezeket az információkat kizárólag a szolgáltatási eredmények generálására használjuk, és nem tartalmaznak nem kapcsolódó személyes információkat, mint például az Ön nevét, telefonszámát vagy eszköz kapcsolatait.</p>
+                
+                <ul>
+                    <li><strong>AI Kérdések és Válaszok funkció:</strong> Csak az Ön által bevitt szövegtartalom vagy hangrészlet kerül feltöltésre. A hangot valós időben szöveggé alakítjuk át továbbítás előtt; az eredeti hanganyagot csak átmenetileg dolgozzuk fel a helyi eszközön. Ezt használja a harmadik fél szervere a kérés megértésére és válasz visszaadására.</li>
+                    <li><strong>Képfelismerési funkció:</strong> Csak az Ön által aktívan felismerésre kiválasztott kép kerül feltöltésre. Feltöltés előtt az APP automatikusan anonimizálja a képet, eltávolítva az esetlegesen jelenlévő érzékeny információkat, mint arcok, személyi azonosító számok, utcacíme és rendszámok, csak a felismerési célhoz releváns képjellemző adatokat megtartva.</li>
+                    <li><strong>Többnyelvű fordítási funkció (beleértve a párbeszéd-fordítást és az egyidejű tolmácsolást):</strong> Csak a fordítani szükséges szövegrészlet vagy valós időben átírt beszéd kerül feltöltésre. Ez a tartalom a fordítás befejeztét követően azonnal törlődik a harmadik fél szerveréről.</li>
+                </ul>
+                
+                <div class="highlight">
+                    <strong>Különleges megjegyzés:</strong> Az Ön Okos Szemüvegén vagy párosított telefonján helyileg tárolt fényképek, hangfelvételek és videók nem kerülnek automatikusan feltöltésre egyetlen szerverre sem, kivéve, ha Ön aktívan rákattint a megosztás gombra. Teljes ellenőrzés alatt tartja ezeket a fájlokat az eszköz helyi tárolókezelő funkcióin keresztül.
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">2.2 Harmadik fél szolgáltatókkal való együttműködés és adatvédelem</div>
+                
+                <h3>2.2.1</h3>
+                <p>Az említett intelligens interakciós funkciók engedélyezése érdekében az alábbi harmadik fél AI szolgáltatókkal (adatfeldolgozókkal) működünk együtt. Minden együttműködés megfelel a GDPR 28. cikkének és a CCPA követelményeinek:</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Harmadik fél neve</th>
+                            <th>Szolgáltatás tartalma</th>
+                            <th>Hivatalos weboldal link</th>
+                            <th>Megfelelőségi igazolások</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>【ChatGPT】</td>
+                            <td>AI-alapú kérdések megválaszolása és képalapú objektumfelismerés</td>
+                            <td><a href="https://chatgpt.com/" target="_blank">https://chatgpt.com/</a></td>
+                            <td>
+                                <div class="compliance-badges">
+                                    <span class="badge">GDPR</span>
+                                    <span class="badge">SOC 2</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>【Microsoft Cognitive Services Speech】</td>
+                            <td>Párbeszéd-fordítás, egyidejű tolmácsolás, beszédszintézis, beszédátírás</td>
+                            <td><a href="https://learn.microsoft.com/hu-hu/azure/ai-services/speech-service/" target="_blank">https://learn.microsoft.com/hu-hu/azure/ai-services/speech-service/</a></td>
+                            <td>
+                                <div class="compliance-badges">
+                                    <span class="badge">ISO/IEC 27001</span>
+                                    <span class="badge">SOC 1</span>
+                                    <span class="badge">SOC 2</span>
+                                    <span class="badge">SOC 3</span>
+                                    <span class="badge">GDPR</span>
+                                    <span class="badge">HIPAA</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>【Google Play Services】</td>
+                            <td>Helyzetinformációk</td>
+                            <td><a href="https://developers.google.com/android/reference/com/google/android/gms/location/package-summary" target="_blank">https://developers.google.com/android/reference/com/google/android/gms/location/package-summary</a></td>
+                            <td>
+                                <div class="compliance-badges">
+                                    <span class="badge">ISO/IEC 27001</span>
+                                    <span class="badge">ISO/IEC 27017 & 27018</span>
+                                    <span class="badge">ISO/IEC 27701</span>
+                                    <span class="badge">SOC 1 / SOC 2 / SOC 3</span>
+                                    <span class="badge">GDPR</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>2.2.2</h3>
+                <p>Adatfeldolgozási kiegészítéseket és GDPR Szabványos Szerződési Klauzulákat (2021-es verzió SCC-k) írtunk alá az említett harmadik felekkel, amelyek kifejezetten rendelkeznek arról, hogy:</p>
+                <ul>
+                    <li>A harmadik felek csak írásos utasításaink keretein belül dolgozhatnak fel információkat.</li>
+                    <li>Nem őrizhetik meg, nem használhatják újra és nem adhatják át információikat más feleknek.</li>
+                    <li>A harmadik feleknek ISO27001-kompatibilis biztonsági intézkedéseket kell bevezetniük, és rendszeresen kell adatfeldolgozási megfelelőségi jelentéseket benyújtaniuk számunkra.</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">2.3 Az Ön jogai és ezek gyakorlásának módja</div>
+                <ul>
+                    <li><strong>Hozzáférési/Bejelentkezési Vezérlési Jog:</strong> Dönthet úgy, hogy regisztrál és személyes adatokat szolgáltat, vagy kihagyja a bejelentkezési ablakot, és közvetlenül csatlakoztatja az eszközt használatra.</li>
+                    <li><strong>Tájékoztatási/Kérdezési Jog:</strong> Joga van lekérdezni a termék használata során generált személyes adatokat, beleértve a helyileg tárolt fájladatokat, eszközműveleti nyilvántartásokat és eszközkonfigurációs információkat, valamint a harmadik fél AI szervereire továbbított releváns információkat.</li>
+                    <li><strong>Törlési Jog:</strong> Önállóan törölhet minden helyileg tárolt személyazonosításra alkalmas információt az eszköz fájlkezelője vagy a támogató App helyi adattisztító funkciói révén.</li>
+                    <li><strong>Helyesbítési Jog:</strong> Ha hibákat vagy hiányosságokat talál személyes adataiban (pl. eszközadaptációs információk, engedélyezési beállítások), javításokat végezhet a támogató App "Én - Személyes Adatkezelés" oldalán keresztül.</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">2.4 Adatbiztonsági intézkedések</div>
+                <ul>
+                    <li><strong>Helyi adatbiztonság:</strong> Az Okos Szemüvegeken és a kötött mobiltelefonon történő helyi tárolás particionált titkosítási mechanizmusokat használ. Csak az engedélyezett termékalkalmazás férhet hozzá a releváns adatokhoz; más harmadik fél alkalmazások általi olvasás tiltott. Az eszköz záróképernyő jelszavának és biometrikus hitelesítésnek (pl. ujjlenyomat, arcfelismerés) a támogatása megakadályozza az adatszivárgást eszköz elvesztése vagy ellopása esetén.</li>
+                    <li><strong>Adatátviteli biztonság:</strong> Az "AI Kérdések és Válaszok, Képfelismerés, Párbeszéd-fordítás, Egyidejű tolmácsolás" funkciók adatátvitelének során a TLS 1.3 titkosítási protokollt használjuk végponttól végpontig történő titkosításhoz, megakadályozva az adatok ellopását vagy hamisítását az átvitel során. Egy adatellenőrzési mechanizmus biztosítja az adatok integritását és pontosságát.</li>
+                    <li><strong>Harmadik fél szerver adatbiztonsági ellenőrzés:</strong> Szigorú adatbiztonsági megállapodásokat írunk alá az AI szolgáltatókkal, amelyek kifejezetten megkövetelik, hogy AES-256 titkosítást használjanak a tárolt átvitt adatokhoz, fokozatos hozzáférés-vezérlési mechanizmusokat állítsanak fel, és biztosítsák a Kínai Népköztársaság Személyes Adatok Védelméről szóló törvénye és Adatbiztonsági törvénye követelményeinek való megfelelést.</li>
+                    <li><strong>Biztonsági incidens válasz:</strong> Átfogó adatbiztonsági incidens választervet hoztunk létre. Adatsértés, hamisítás vagy elvesztés biztonsági incidens esetén azonnal aktiválódik a vészhelyzeti terv, és olyan javító intézkedések hajtódnak végre, mint adatizoláció, sebezhetőségi javítás és információkövetés. A törvények előírásai szerint 72 órán belül értesítjük Önt App push értesítések, SMS vagy telefonhívások útján.</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">2.5 Irányelvfrissítések és értesítés</div>
+                <p>Az Irányelv frissítése után értesítjük Önt APP felugró ablakok, e-mail vagy hivatalos weboldali bejelentések útján. A magjogi jogokat és érdekeket érintő változtatások esetén 30 napos megfontolási időt biztosítunk. A szolgáltatások további használata az aktualizált Irányelv elfogadását jelenti.</p>
+                <p class="last-updated">Az Irányelv utolsó frissítésének dátuma: 2025. december 31.</p>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">2.6 Lépjen kapcsolatba velünk</div>
+                <div class="contact-info">
+                    <p>Ha bármilyen kérdése van, vagy szeretné gyakorolni jogaikat ezen Adatvédelmi Irányelv alapján, kérjük, lépjen kapcsolatba velünk a következő címen:</p>
+                    <p><strong>E-mail:</strong> <a href="mailto:help@imikilife.com">help@imikilife.com</a></p>
+                    <p><strong>EU polgárok számára:</strong> Kapcsolatba léphetünk adatvédelmi tisztviselőnkkel is: <a href="mailto:gdpr@imikilife.com">gdpr@imikilife.com</a></p>
+                </div>
+            </div>
         </div>
-
-        <h3>Egyéb célok</h3>
-        <p>Információit más célokra is felhasználjuk, ahogyan Ön kéri, vagy a vonatkozó jogszabályok megengedik.</p>
-        <ul>
-            <li><strong>Tartalom megosztása barátokkal vagy kollégákkal:</strong> Szolgáltatásaink különféle eszközöket és funkciókat kínálhatnak. Például lehetővé tehetjük, hogy információkat szolgáltasson barátairól vagy kollégáiról ajánlási szolgáltatásainkon keresztül. Ajánlási szolgáltatásaink lehetővé tehetik, hogy bizonyos tartalmakat továbbítson vagy megosszon egy barátjával vagy kollégájával, például egy e-mailt, amely meghívja barátját, hogy használja szolgáltatásainkat.</li>
-        </ul>
-
-        <h2>Hogyan hozzuk nyilvánosságra információit</h2>
-        <p>Információit harmadik felek számára tárjuk fel különböző üzleti célokból, beleértve szolgáltatásaink nyújtását, saját magunk vagy mások védelmét, vagy egy nagyobb üzleti tranzakció (például egyesülés, értékesítés vagy vagyonátruházás) eseményét, az alábbiak szerint.</p>
-
-        <h3>Nyilvánosságra hozatal a szolgáltatásaink nyújtása érdekében</h3>
-        <p>Azoknak a harmadik feleknek a kategóriái, akikkel megoszthatjuk információit, az alábbiakban olvashatók:</p>
-        <ul>
-            <li><strong>Más felhasználók vagy harmadik felek:</strong> Amikor a Szolgáltatásokat használja, dönthet úgy, hogy személyes információkat vagy tartalmakat megoszt más felhasználókkal vagy harmadik felekkel. Ezen túlmenően, profilja bizonyos aspektusai más felhasználók számára is elérhetők lehetnek.</li>
-            <li><strong>Szolgáltatók:</strong> Megoszthatjuk személyes információit harmadik féltől származó szolgáltatóinkkal, akik ezt az információt arra használják, hogy segítsenek szolgáltatásaink nyújtásában. Ebbe beletartoznak azok a szolgáltatók, akik informatikai támogatást, tárhelyszolgáltatást, fizetésfeldolgozást, ügyfélszolgálatot és kapcsolódó szolgáltatásokat nyújtanak nekünk.</li>
-            <li><strong>Üzleti partnerek:</strong> Megoszthatjuk személyes információit üzleti partnereinkkel, hogy Önnek egy kért terméket vagy szolgáltatást nyújthassunk. Személyes információit megoszthatjuk azokkal az üzleti partnerekkel is, akikkel együtt kínálunk termékeket vagy szolgáltatásokat.</li>
-            <li><strong>Hirdetési partnerek:</strong> Megoszthatjuk személyes információit, kivéve biometrikus adatait, harmadik féltől származó hirdetési partnereinkkel. Ezek a harmadik féltől származó hirdetési partnerek technológiákat és egyéb nyomkövetési eszközöket helyezhetnek el szolgáltatásainkon, hogy információkat gyűjtsenek a tevékenységeiről és eszközéről (pl. IP-címe, süti azonosítók, meglátogatott oldal(ak), hely, napszak). Ezek a hirdetési partnerek ezt az információt (és más szolgáltatásokból gyűjtött hasonló információkat) arra használhatják, hogy személyre szabott hirdetéseket juttassanak el Önhöz, amikor a hálózatukon belüli digitális tulajdonságokat látogatja. Ezt a gyakorlatot általában "érdeklődésalapú hirdetésnek" vagy "személyre szabott hirdetésnek" nevezik.</li>
-            <li><strong>API-k/SDK-k:</strong> Harmadik féltől származó alkalmazásprogramozási felületeket ("API-k") és szoftverfejlesztő készleteket ("SDK-k") használhatunk szolgáltatásaink funkcionalitásának részeként. API-k és SDK-k használatunkról a további információkért kérjük, lépjen kapcsolatba velünk az alábbiak szerint.</li>
-        </ul>
-
-        <h3>Nyilvánosságra hozatal saját magunk vagy mások védelme érdekében</h3>
-        <p>Megkereshetjük, megőrizhetjük és nyilvánossá tehetjük Önhöz kapcsolódóan tárolt bármely információt külső felek számára, ha jóhiszeműen úgy véljük, hogy ez szükséges vagy megfelelő a következőkhez: a hatósági vagy nemzetbiztonsági kérelmek és a jogi eljárások, például bírósági végzés vagy idézet betartásához; Ön, mi vagy mások jogainak, tulajdonának vagy biztonságának védelméhez; irányelveink vagy szerződéseink érvényesítéséhez; nekünk fizetendő összegek beszedéséhez; vagy gyanús vagy tényleges illegális tevékenység nyomozásában vagy büntetőeljárásában való segítségnyújtáshoz.</p>
-
-        <h2>Személyes információk megőrzése</h2>
-        <p>A személyes információkat, amelyeket ezek szerint az Adatvédelmi nyilatkozat szerint gyűjtünk, addig tárolhatjuk, amíg Ön használja szolgáltatásainkat, vagy amíg szükséges a gyűjtés céljának teljesítéséhez, szolgáltatásaink nyújtásához, viták rendezéséhez, jogi védelmek megalapozásához, auditok lebonyolításához, legitim üzleti célok követéséhez, szerződéseink érvényesítéséhez és a vonatkozó jogszabályok betartásához.</p>
-
-        <h2>Általános elvek a személyes adatok feldolgozásával kapcsolatban</h2>
-        <p>Ezek szerint az Adatvédelmi irányelvek szerint a személyes adatokat adatkezelőként dolgozzuk fel az itt nevezett alapelvek szerint: (i) a törvényesség és a jóhiszeműség alapján, (ii) pontosság és szükség esetén naprakészség, (iii) meghatározott, kifejezett és legitim célokra történő feldolgozás, (iv) a feldolgozás céljára korlátozottság és adatminimalizálás; és (v) a vonatkozó jogszabályban meghatározott vagy a feldolgozás céljához szükséges időtartamra történő tárolás.</p>
-
-        <h2>Személyes adatok feldolgozásának céljai és jogi alapjai</h2>
-        <p>Személyes adatait automatikus vagy nem automatikus eszközökkel dolgozzuk fel az alábbi célokra, a vonatkozó jogszabályoknak és a Ptk. 5. és 6. cikkének megfelelően, amennyiben azt a törvények kifejezetten megengedik, szerződés létrejötte vagy közvetlen kapcsolatban áll a szerződés végrehajtásával vagy teljesítésével, valamint az IMIKI AI legitim érdekei miatt, feltéve, hogy alapvető jogait és szabadságait védik.</p>
-
-        <h3>Személyes adatok feldolgozásának céljai – Azonosítási információk</h3>
-        <ul>
-            <li>A jogszabályoknak megfelelő tevékenységek végrehajtása</li>
-            <li>Vállalat/termék/szolgáltatás kötelezettségvállalási műveleteinek végrehajtása</li>
-        </ul>
-
-        <h3>Vizuális és hangfelvételek</h3>
-        <ul>
-            <li>Megállapodási folyamatok végrehajtása</li>
-            <li>Tárolási és archiválási tevékenységek végzése</li>
-            <li>Marketing elemzési tanulmányok végzése</li>
-        </ul>
-
-        <h3>Jogi alapok</h3>
-        <p>E szöveg szerint személyes adatait a fenti általános feltételeknek megfelelően a következő célokra dolgozzuk fel:</p>
-        <ul>
-            <li><strong>Azonosítási információk, kapcsolattartási információk, vizuális és hangfelvételek:</strong> Szükséges személyes adatait feldolgoznunk, feltéve, hogy szerződéses kapcsolatot létesítünk Önnel, vagy az közvetlenül kapcsolódik ebből a szerződésből eredő teljesítési kötelezettségünkhöz. Jogtárgy létrehozása, a jog gyakorlása és védelme érdekében kell adatokat feldolgoznunk.</li>
-            <li><strong>Folyamatbiztonság:</strong> A jog kifejezetten előírja az általunk végzett folyamatot, amely során személyes adatait dolgozzuk fel. Kötelezettségünk teljesítéséhez szükséges feltételek.</li>
-            <li><strong>Marketing adatok:</strong> Az Ön kifejezett hozzájárulása.</li>
-        </ul>
-
-        <p>Ezen kívül a személyes adatok feldolgozásának céljai frissülhetnek a vállalati irányelveinkből és a jogszabályokból eredő kötelezettségeink alapján; különösen:</p>
-        <ul>
-            <li>Felhasználói fiókok létrehozása a szolgáltatás igénybevevői/alkalmazásfelhasználók számára</li>
-            <li>Szolgáltatásaink testreszabása, felhasználóink és preferenciáik megértése a felhasználói élmény és a szolgáltatásaink használatának élvezetének fokozása, valamint felhasználóink élményének javítása érdekében</li>
-            <li>Tájékoztatás új termékekről, szolgáltatásokról és alkalmazásokról, valamint információk szállítása hirdetésekről és promóciókról</li>
-            <li>A szolgáltatás igénybevevőinek digitális előfizetési és alkalmazáson belüli vásárlási folyamatainak lebonyolítása</li>
-            <li>Az automatikusan megújuló előfizetések lebonyolítása a felhasználók számára a tartalomhoz, szolgáltatásokhoz vagy prémium funkciókhoz való hozzáférés biztosítására szolgáltatásunkban</li>
-            <li>Információbiztonsági folyamatok lebonyolítása</li>
-            <li>A jogszabályoknak megfelelő tevékenységek végzése</li>
-            <li>A hatóságok követelményeinek teljesítése</li>
-            <li>Pénzügyi és számviteli tranzakciók folyamatainak lebonyolítása</li>
-            <li>Kommunikációs tevékenységek végzése</li>
-            <li>Szerződési folyamatok lebonyolítása</li>
-            <li>Stratégiai tervezési tevékenységek végzése</li>
-            <li>Kérelmek és panaszok nyomon követése</li>
-        </ul>
-
-        <h2>Harmadik fél weboldalai és alkalmazásai</h2>
-        <p>Az alkalmazások tartalmazhatnak linkeket más, ismeretlen weboldalakra, amelyek tartalmát nem ellenőrizzük. Ezek a linkelt weboldalak az IMIKI AI szövegeitől eltérő feltételeket és kikötéseket tartalmazhatnak. Az IMIKI AI nem vállal felelősséget e weboldalak által feldolgozható információk felhasználásáért vagy nyilvánosságra hozataláért. Hasonlóképpen, az IMIKI AI nem vállal felelősséget más oldalakról az IMIKI AI tulajdonában álló IMIKI AI alkalmazásokhoz biztosított linkekért. Információkat tisztességes és törvényes eszközökkel gyűjtünk, tudomásával és hozzájárulásával. Azt is tudatjuk Önnel, hogy miért gyűjtjük és hogyan fogják felhasználni. Szabadon visszautasíthatja erre vonatkozó kérésünket, tudomásul véve, hogy nélküle esetleg nem tudjuk Önnek biztosítani kívánt szolgáltatásaink egy részét.</p>
-
-        <h2>Push értesítések</h2>
-        <p>Az IMIKI AI időnként push értesítéseket küldhet Önnek mobilalkalmazásain keresztül az alkalmazásfrissítésekről vagy szolgáltatásainkkal kapcsolatos értesítésekről. Ilyen kommunikációt és értesítéseket mindig szerkesztheti eszköze beállításaiban, és leállíthatja az ilyen kommunikációk és értesítések fogadását. Adatait a vonatkozó jogszabályban meghatározott időtartamra, vagy a feldolgozás céljának megszűnéséig szükséges ésszerű időre, illetve a jogi elévülési időszakok alatt tároljuk. Az IMIKI AI továbbra is tárolhatja személyes adatait, annak felhasználási céljának lejárta után is, amennyiben ezt más törvények írják elő, vagy Ön erre vonatkozóan külön hozzájárulást ad. Abban az esetben, ha Ön hozzájárulásával engedélyezi az IMIKI AI-nak, hogy személyes adatait további időre tárolja, az ilyen adatokat az adott kiegészítő idő lejártakor, vagy a feldolgozás céljának megszűnésekor azonnal törölni, megsemmisíteni vagy anonimizálni kell.</p>
-
-        <h2>Technikai és adminisztratív intézkedések</h2>
-        <p>A személyes adatokat a vonatkozó jogszabályoknak megfelelően tároljuk a vonatkozó jogszabályokban meghatározott időtartamra, vagy a feldolgozás céljához szükséges időre. Az IMIKI AI vállalja, hogy minden szükséges technikai és adminisztratív intézkedést megtesz, és megfelelő gondossággal jár el a személyes adatok titkosságának, integritásának és biztonságának biztosítása érdekében. Ebben az összefüggésben megteszi a szükséges intézkedéseket a személyes adatok jogellenes feldolgozása, az adatokhoz való jogosulatlan hozzáférés, az adatok jogellenes nyilvánosságra hozatala, módosítása vagy megsemmisítése megelőzése érdekében. Ennek megfelelően az IMIKI AI a következő technikai és adminisztratív intézkedéseket teszi a feldolgozott személyes adatokkal kapcsolatban:</p>
-
-        <h3>Biztonsági intézkedések közé tartoznak:</h3>
-        <ul>
-            <li><strong>Információbiztonsági fenyegetések és események kezelése:</strong> A szervereken és tűzfalakon bekövetkező események átkerülnek az "Információbiztonsági fenyegetések és események kezelése" rendszerbe. Ez a rendszer riasztja a felelős munkatársakat, ha biztonsági fenyegetés következik be, és lehetővé teszi számukra, hogy azonnal reagáljanak a fenyegetésre.</li>
-            <li><strong>Titkosítás:</strong> A bizalmas adatokat titkosítási módszerekkel tároljuk, és szükség esetén titkosított módszerekkel titkosított környezeteken keresztül továbbítjuk, a titkosítási kulcsokat pedig biztonságos és különböző környezetekben tároljuk.</li>
-            <li><strong>Naplózás:</strong> A bizalmas adatokkal kapcsolatos összes tranzakciós rekordot biztonságosan naplózzuk.</li>
-            <li><strong>Kétfaktoros hitelesítés:</strong> A bizalmas adatokhoz való távoli hozzáférés legalább kétfaktoros hitelesítésen keresztül engedélyezett.</li>
-            <li><strong>Fizikai adatbiztonság:</strong> Gondoskodik arról, hogy a papíron lévő személyes adatokat szükség esetén szekrényekben tárolják, és csak az arra feljogosított személyek férjenek hozzájuk. Megfelelő biztonsági intézkedéseket (például villamos áram szivárgása, tűz, áradás, lopás stb.) tesznek a bizalmas adatok tárolásának környezetének természete alapján.</li>
-            <li><strong>Titoktartási megállapodás:</strong> A bizalmas személyes adatok feldolgozásában részt vevő munkavállalókkal titoktartási megállapodást kötnek.</li>
-        </ul>
-
-        <h3>Bizalmas személyes adatok átvitele</h3>
-        <p>Ha bizalmas személyes adatok átvitele szükséges e-mailen keresztül; az ilyen átvitel (i) titkosított vállalati e-mailen vagy (ii) Regisztrált E-mailen keresztül történik. Abban az esetben, ha a személyes adatokat az IMIKI AI Apps vagy az IMIKI AI rendszer elleni támadások következtében megsérülnek, annak ellenére, hogy az IMIKI AI megteszi a szükséges információbiztonsági intézkedéseket, vagy a személyes adatokat jogosulatlan harmadik felek szerzik meg, az IMIKI AI ezt az állapotot azonnal értesíti a Felhasználókat és, ha szükséges, a vonatkozó adatvédelmi hatóságot, és megteszi a szükséges intézkedéseket.</p>
-
-        <h2>Személyes adatok átadása harmadik feleknek</h2>
-        <p>A személyes adatok átadására alkalmazandó eljárásokat és elveket a Ptk. 8. és 9. cikkei szabályozzák, és a szállító személyes és különleges kategóriájú adatai átadhatók harmadik feleknek az országon belül vagy külföldön, mivel az országon kívül található szervereket és felhőrendszereket használhatunk. Személyes adatai a következő okokból átvihetők külföldre:</p>
-        <ul>
-            <li>Tárolási és archiválási tevékenységek végzése</li>
-            <li>Üzleti tevékenységek végzése</li>
-            <li>Áruk/szolgáltatások utánértékesítési támogatási szolgáltatásainak végzése</li>
-            <li>Ügyfélkapcsolat-kezelési folyamatok kezelése</li>
-        </ul>
-
-        <p>Személyes adatait továbbá átadhatjuk vállalatunk szolgáltatóinak, olyan harmadik feleknek, mint a Facebook SDK, az Adjust és a Firebase Analytics, amelyek be vannak ágyazva szolgáltatásunkba a következő célokból:</p>
-        <ul>
-            <li>Azonosítási, kommunikációs és tranzakciós biztonsági információk megosztása a felhatalmazott közintézményekkel és szervezetekkel a jogszabályoknak megfelelő tevékenységek végrehajtása, a jogi ügyek nyomon követése és végrehajtása, a felhatalmazott személyek, intézmények és szervezetek tájékoztatása céljából.</li>
-            <li>Azonosítási és kapcsolattartási információk megosztása az utánértékesítési támogatási szolgáltatások kezelése, az üzleti tevékenységek végzése és az ügyfélkapcsolat-kezelési folyamatok kezelése céljából.</li>
-            <li>Azonosítási és kapcsolattartási információk megosztása a felhasználó által harmadik féltől származó alkalmazásokkal, amelyek integrálva vannak az alkalmazásokba a Felhasználó kifejezett hozzájárulásával.</li>
-        </ul>
-
-        <h2>Személyzet</h2>
-        <p>Ha Ön AI Chat Plus munkavállaló vagy jelentkező, akkor azokat az információkat gyűjtjük, amelyeket önként szolgáltat nekünk. Az összegyűjtött információkat emberi erőforrások céljából használjuk a munkavállalók juttatásainak adminisztrálására és a jelentkezők szűrésére.</p>
-
-        <p>Kapcsolatba léphet velünk azért, hogy (1) frissítse vagy javítsa információit, (2) módosítsa preferenciáit a kommunikációval és más, tőlünk kapott információkkal kapcsolatban, vagy (3) megkapja az Önnel kapcsolatos információk nyilvántartását. Az ilyen frissítések, javítások, változtatások és törlések nincs hatással más, általunk fenntartott információra vagy olyan információra, amelyet ezek szerint az Adatvédelmi irányelveknek megfelelően átadtunk harmadik feleknek az ilyen frissítés, javítás, változtatás vagy törlés előtt.</p>
-
-        <h2>Üzlet eladása</h2>
-        <p>Fenntartjuk a jogot, hogy információkat továbbítsunk egy harmadik félnek abban az esetben, ha az AI Chat iOS vagy bármely társvállalata (ahogyan azt itt meghatározzuk) teljes vagy jelentős részét képező vagyontárgyak értékesítése, egyesülése vagy egyéb átruházása történik, vagy az AI Chat vagy bármely társvállalatának azon részére, amelyhez a Szolgáltatás kapcsolódik, vagy abban az esetben, ha megszüntetjük üzleti tevékenységünket, vagy benyújtunk, vagy ellenünk benyújtanak csődeljárást, reorganizációt vagy hasonló eljárást, feltéve, hogy a harmadik fél vállalja, hogy betartja ezeknek az Adatvédelmi irányelveknek a feltételeit.</p>
-
-        <h2>Társvállalatok</h2>
-        <p>Közölhetünk információkat (beleértve a személyes információkat) Önről társvállalatainkkal. Ezen Adatvédelmi irányelvek céljából a "Társvállalat" minden olyan személyt vagy jogi személyt jelent, amelyet közvetlenül vagy közvetve az AI Chat App irányít, amely irányítja, vagy amely az AI Chat App közös irányítása alatt áll, akár tulajdonláson, akár más módon. Az Önnel kapcsolatos bármely információ, amelyet társvállalatainknak szolgáltatunk, azok a társvállalatok ezek szerint az Adatvédelmi irányelvek feltételei szerint kezelik.</p>
-
-        <h2>Ön hozzájárulása</h2>
-        <p>Az AI Chat Android használatával vagy közvetlen kapcsolatfelvétellel Ön tudomásul veszi ezeknek az Adatvédelmi irányelveknek az elfogadását. Ha nem ért egyet ezekkel az Adatvédelmi irányelvekkel, akkor ne lépjen kapcsolatba weboldalunkkal, és ne használja szolgáltatásainkat. A weboldal további használata, a közvetlen kapcsolattartás velünk, vagy az ezekben az Adatvédelmi irányelvekben történt, a személyes információi felhasználását vagy nyilvánosságra hozatalát jelentősen nem érintő változtatások közzététele azt jelenti, hogy elfogadja ezeket a változtatásokat.</p>
-
-        <p>Frissítettük Adatvédelmi irányelveinket, hogy teljes átláthatóságot biztosítsunk abban, hogy mi kerül beállításra, amikor felkeresi oldalunkat, és hogyan használják fel. Alkalmazásunk használatával, fiók regisztrálásával vagy vásárlással Ön ezzel hozzájárul Adatvédelmi irányelveinkhez, és elfogadja annak feltételeit.</p>
-
-        <h2>Linkek más weboldalakra</h2>
-        <p>Ez az Adatvédelmi irányelvek kizárólag a Szolgáltatásokra vonatkozik. A Szolgáltatások tartalmazhatnak linkeket más, az AI Chat által nem működtetett vagy ellenőrzött weboldalakra. Nem vagyunk felelősek az ilyen weboldalak tartalmáért, pontosságáért vagy az ott kifejezett véleményekért, és az ilyen weboldalakat nem vizsgáljuk, nem figyeljük vagy nem ellenőrizzük pontosságuk vagy teljességük szempontjából. Kérjük, ne feledje, hogy amikor linket használ a Szolgáltatásokról egy másik weboldalra, Adatvédelmi irányelveink már nem érvényesek. Böngészése és interakciója bármely más weboldalon, beleértve azokat is, amelyeken link található platformunkon, az adott weboldal saját szabályainak és irányelveinek van alávetve. Az ilyen harmadik felek saját sütiket vagy más módszereket használhatnak információik gyűjtésére Önről.</p>
-
-        <h2>Sütik</h2>
-        <p>Az AI Chat "Sütiket" használ weboldalunk azon területeinek azonosítására, amelyeket Ön meglátogatott. A süti egy kis adatdarab, amelyet webböngészője tárol számítógépén vagy mobileszközén. Sütiket használunk alkalmazásunk teljesítményének és funkcionalitásának fokozására.</p>
-
-        <div class="contact-info">
-            <h2>Lépjen kapcsolatba velünk</h2>
-            <p>Ha kérdése van ezzel az Adatvédelmi irányelvekkel kapcsolatban, vagy további információra van szüksége, kérjük, vegye fel velünk a kapcsolatot a következő módokon:</p>
-            <p><strong>E-mail:</strong> help@imikilife.com<br>
-            </p></div>
-
-        <div class="footer">
-            <p>Ez az Adatvédelmi irányelvek utoljára frissítve: 2024</p>
-            <p>© 2024 IMIKI AI. Minden jog fenntartva.</p>
-        </div>
-    </div>
-
-</body></html>
+    </main>
+    
+    <footer>
+        <p>© 2025 IMIKI AI. Minden jog fenntartva.</p>
+        <p>Ez az Adatvédelmi Irányelv megfelel az Európai Unió GDPR követelményeinek és más releváns adatvédelmi törvényeknek.</p>
+        <p>Adatvédelmi irányelv verzió: 2025. december 31.</p>
+    </footer>
+</body>
+</html>
