@@ -1,355 +1,288 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2113.6">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.7px 'Songti SC'; color: #000000; -webkit-text-stroke: #000000}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px 'Songti SC'; color: #000000; -webkit-text-stroke: #000000}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.7px Times; color: #000000; -webkit-text-stroke: #000000}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #000000; -webkit-text-stroke: #000000}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; font: 14.0px Times; color: #000000; -webkit-text-stroke: #000000}
-    span.s1 {font-kerning: none}
-    span.s2 {font: 18.7px Times; font-kerning: none}
-    span.s3 {font: 18.7px 'Songti SC'; font-kerning: none}
-    span.s4 {font: 20.0px 'PingFang SC'; font-kerning: none; background-color: #ffffff}
-    span.s5 {font: 20.0px Helvetica; font-kerning: none; background-color: #ffffff}
-    span.s6 {font: 14.0px Times; font-kerning: none}
-    span.s7 {font: 14.0px 'Songti SC'; font-kerning: none}
-    span.Apple-tab-span {white-space:pre}
-  </style>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMIKI AI 隐私政策</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        
+        h1 {
+            color: #1a237e;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            color: #283593;
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        h3 {
+            color: #3949ab;
+            font-size: 1.3rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .last-updated {
+            color: #666;
+            font-style: italic;
+            text-align: right;
+            margin-top: 10px;
+        }
+        
+        .chapter {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+        
+        .section {
+            margin-bottom: 20px;
+        }
+        
+        .section-title {
+            font-weight: bold;
+            color: #444;
+            margin-bottom: 8px;
+        }
+        
+        ul, ol {
+            padding-left: 25px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #f1f5fd;
+            color: #1a237e;
+            font-weight: 600;
+        }
+        
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+        
+        a {
+            color: #3949ab;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .highlight {
+            background-color: #fffde7;
+            padding: 15px;
+            border-left: 4px solid #ffd600;
+            margin: 20px 0;
+        }
+        
+        .contact-info {
+            background-color: #e8f5e9;
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 20px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .chapter {
+                padding: 15px;
+            }
+            
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
 </head>
 <body>
-<p class="p1"><span class="s1"><b>隐私政策</b></span></p>
-<p class="p1"><span class="s1">我们向您承诺</span></p>
-<p class="p1"><span class="s1">IMIKI AI 的运动指导和健康服务应用</span><span class="s2">,</span><span class="s1">本隐私政策规定了IMIKI AI（下文简称“IMIKI AI”或“我们”）如何收集、使用、披露、处理和保护您在使用我们的产品和服务时提供给我们的信息。若我们要求您提供某些信息，以便在使用IMIKI AI产品和服务时验证您的身份，我们将仅严格遵守本隐私政策和</span><span class="s2">/</span><span class="s1">或我们的用户条款与条件来使用这些信息。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">本隐私政策在制定时充分考虑到您的需求；您全面了解我们的个人资料收集和使用惯例而且确信自己最终能控制提供给IMIKI AI的个人信息，这一点至关重要。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">在这项隐私政策中，“个人信息”指信息本身或与IMIKI AI能够访问的个人的其他信息联系后能够识别特定个人的数据。此类个人信息包括您的姓名、地址、电话号码和电子邮箱地址。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">通过使用IMIKI AI产品和服务，即表示您已阅读、认可并接受本隐私政策中所述之所有条款，包括我们随时作出的任何变更。我们承诺遵照适用法律（包括您所在地的数据保护法律）来保护您的个人信息的隐私、机密和安全。同时我们承诺我们的全体员工和代理商履行这些义务。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">最后，我们所希望的就是为我们的用户带来最好的体验。如果您对这一隐私政策中概括的数据处理惯例有任何疑问，请通过在线渠道联系我们，以便我们处理您的特殊需求。我们很高兴能直接处理您的问题。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1"><b>收集哪些信息以及如何使用信息？</b></span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1"><b>收集的信息类别</b></span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">为了向您提供我们的服务，我们会要求您提供向您提供服务所必需的个人信息。如果您不提供个人信息，我们可能无法向您提供我们的产品或服务。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1"><b>我们收集以下各类信息（无论其是否为个人信息）：</b></span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">关于您的资料：我们可能会收集和使用头像、个人签名、昵称、性别、时区、语言、您的运动偏好及地区数据。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">个人身体数据：启动 IMIKI AI 后，我们需要您提供生日、身高、体重、性别数据。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">设备记录的数据：当您使用 IMIKI AI 同步相关设备的数据时，我们会记录个人资料，包括活动信息、睡眠信息、心率信息、血氧饱和度（</span><span class="s2">SpO2</span><span class="s1">）、体重、阻抗值、距离、泳姿、配速、运动时间。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">行为标注信息：当您选择标记相关的行为时，IMIKI AI 会采集包括但不限于活动信息、心率数据等用于为您提供对应服务标记功能。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">来电信息：当您使用来电、短信提醒功能时，IMIKI AI 会获得来电、短信、通讯录相关的数据。在您的允许下，相关的来电、短信、通讯录等数据用于手环、手表等设备显示，但是 </span><span class="s2">IMIKI AI </span><span class="s1">不会存储您相关来电、短信、通讯录相关的数据。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">手机信息：当您使用 IMIKI AI 时，我们需要取得您的手机操作系统版本及移动手机品牌型号、手机硬件标识符（如</span><span class="s2">IDFA</span><span class="s1">、</span><span class="s2">IMEI</span><span class="s1">）、手机系统时间、手机闹钟。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">网络使用数据：我们可能会收集与 IMIKI AI 特定功能相关的网络类型、网络信号等。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">音乐控制信息：当您使用音乐控制功能，我们会收集您手机中的音乐信息（例如：歌曲名称、歌曲播放状态、音量）并同步到设备上。这些信息只是在设备上进行展示，我们不会储存前述信息。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">位置数据：当您使用基于位置的程序服务或功能时，我们可能会收集您的位置数据。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">意见反馈信息：当您提交相关意见反馈时，会根据您的选择，收集相关的用户反馈日志、联系方式等信息。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">设备信息：当您使用 IMIKI AI 连接某个硬件设备时，包括但不限于该装置的唯一标识符、固件版本、大概地理位置的数据（非个人资料）及相关的功能使用统计情况（非个人资料）将被传送至服务器。上述数据收集亦可能适用于您的更新系统或软件、恢复原厂设定等。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">您在使用相关功能时主动提交的信息：如果您在 IMIKI AI中 进行了目标、心率提醒设定，您自行填写的运动目标和体重目标、心率提醒值将被收集，以便当目标达到时对您进行提示或预警。如您选择使用女性健康功能，您主动填写的月经持续天数、两次月经开始日的间隔天数、最近一次月经开始的日期以及在使用本功能过程中每次提交的月经开始日期、月经结束日期、月经期间的身体状况及心情都将被收集。如果您选择自己制作表盘，您自行上传的图片将被我们收集以便作为您的表盘背景。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">存储权限：读写本地存储权限为确保音乐功能和电子书功能以及账号的安全和保存用户当前的运动数据并存储，需要读写本地存储权限，包含修改/删除</span><span class="s2">SD</span><span class="s1">卡中的内容、读取</span><span class="s2">SD</span><span class="s1">卡上的内容权限</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">为保障您正常使用我们的服务，维护IMIKI AI基础功能的正常运行，根据您的设备终端和网络状态优化产品性能，提升您的使用体验并保障您的账号安全，我们会收集您的设备名称、设备类型、设备型号和版本、操作系统、系统属性、</span><span class="s2">IP</span><span class="s1">地址、运营商信息、</span><span class="s2">Wi-Fi</span><span class="s1">状态</span><span class="s2">/</span><span class="s1">参数，设备识别符（如</span><span class="s2">IMEI</span><span class="s1">、</span><span class="s2">IMSI</span><span class="s1">、</span><span class="s2">MAC</span><span class="s1">地址、</span><span class="s2">Android ID</span><span class="s1">、硬件序列号）、应用</span><span class="s2">ID</span><span class="s1">、网络类型、传感器信息等信息。请注意，单独的传感器信息不属于个人信息，我们也不会将传感器信息用于其他用途。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">高德地图、高德定位：需要调取您的定位权限，将收集您的设备信息、网络状态、位置信息、Wi-Fi信息，收集设备</span><span class="s2">MAC</span><span class="s1">地址、软件安装列表，</span><span class="s2">Android_ID,</span><span class="s1">传感器信息</span><span class="s2">,</span><span class="s1">设备序列号等以便在您户外运动时为您提供地图及定位服务；</span></p>
-<p class="p1"><span class="s1">使用目的: 我们的产品集成高德地图</span><span class="s2">SDK</span><span class="s1">，获取您的位置信息，获取更准确的天气信息同步到我们的设备，收集</span><span class="s2">MAC</span><span class="s1">地址，</span><span class="s2">IMEI,Android_ID</span><span class="s1">高德地图通过分析对比，保证数据准确性和反作弊能力</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1"><b>这些个人信息将会被如何使用</b></span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">收集个人信息的目的在于向您提供产品和/或服务，并且保证我们遵守适用法律。您特此同意我们出于本隐私政策规定的目的处理个人信息，并向我们的关联公司（其涉及通信、社交媒体、技术和云业务）、第三方服务供应商（定义如下）披露个人信息。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">我们可能会将您的个人信息用于下列目的：</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">计算运动、健康结果。我们会使用个人身体数据及/或设备记录的数据计算运动及健康结果，用于在</span><span class="s2">APP</span><span class="s1">及</span><span class="s2">/</span><span class="s1">或设备内向您展示，例如：</span><span class="s2">BMI</span><span class="s1">、</span><span class="s2">PAI</span><span class="s1">、肌肉、体脂、水分、蛋白质、基础代谢、内脏脂肪、骨量、体型、身体年龄、压力情况、卡路里消耗、最大摄氧量、训练效果、训练负荷、恢复时间、血氧饱和度。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">身体情况分析。基于您提供的个人身体数据及设备记录的数据，为您提供与您身体情况相关的分析供您参考。例如：向您提供一个理想体重的区间值供您参考；向您展示您当前及/或全天的压力值及</span><span class="s2">/</span><span class="s1">或压力变化趋势。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">提供 IMIKI AI 服务。相关的设备与 </span><span class="s2">IMIKI AI </span><span class="s1">同步后，设备中记录的数据将会同步到 </span><span class="s2">IMIKI AI </span><span class="s1">中，并展示给用户。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">显示来电信息。当您收到来电、文字信息，部分支持该功能的设备上会显示来电或信息的数据。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">显示音乐信息。当您使用音乐控制功能，部分支持该功能的设备上会显示音乐信息（例如：歌曲名称、歌曲播放状态、音量）。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">确定手机是否受支持。与手机相关的信息将用于判断您的手机能否使用 IMIKI AI。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">提供闹钟提醒功能：我们会收集您的手机闹钟信息，在您开启手机闹钟提醒时，及时通过设备的震动提醒您。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">蓝牙拍照：您可以通过部分支持该功能的设备来控制手机的拍照。为此，设备将会与手机进行蓝牙配对，以便用于控制拍照，在进行蓝牙配对过程中，还会申请手机蓝牙权限。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">提供女性健康功能：当您选择使用女性健康功能，您可以在部分支持该功能的设备上或 IMIKI AI 中记录并查看与月经期相关的信息；我们会根据您填写的信息为您预测月经期并进行提醒。我们还可能根据您填写的月经时间及月经期间的身体状况为您推荐适宜的训练课程。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">展示睡眠信息：我们会使用个人身体资料及设备记录的数据计算和分析您的睡眠情况，用于在 IMIKI AI 内向您展示，如睡眠得分、睡眠时间、快速眼动睡眠分期（</span><span class="s2">REM</span><span class="s1">）、睡眠时长分布、睡眠呼吸质量。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">提供心脏健康监测功能：部分设备支持心脏健康监测功能，若您选择开启此功能，我们可能收集您的心率信息以为您展示您的心率状态，以便在发现数据变化时通过设备进行提醒，并在设备端及 IMIKI AI 中向您展示。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">提供网络相关服务。IMIKI AI 会根据不同的网络类型、网络信号等信息，提示用户下载运动相关的视频所需要的流量、判断是否有新版本的 </span><span class="s2">IMIKI AI </span><span class="s1">可更新。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">统计分析：我们会对我们的服务或设备情况进行统计分析，并可能会与公众或第三方分享这些统计数据，用于展示我们产品或服务的使用趋势、进行产品及服务的优化、向您展示排名、好友PK等，例如通过统计您的步数，向您展示与您有相关性（如与同一地区的用户）对比的结果，但这些统计信息不包含您的任何身份识别信息。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">当你使用我们可穿戴设备连接时，为了保证蓝牙连接的稳定性和消息推送的及时性，我们需要使用自启动服务以便蓝牙能正常回连，APP能正常启动，如果想关掉自启动功能，可能会导致蓝牙无法正常回连，消息无法正常推送到可穿戴设备。你可以在设置</span><span class="s2">-</span><span class="s1">应用</span><span class="s2">-</span><span class="s1">自启动管理中关闭自启动功能</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1"><b>Cookie 及其他技术</b></span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">我们收集哪些数据，并会如何使用此类数据？IMIKI AI以及第三方服务供货商均有使用 Cookie、标签及脚本等技术。这些技术用于分析趋势、管理网站、追踪网站用户动态，并收集有关我们整体用户群的人口统计数据。我们会收到相关企业以个别及整体为单位编写的上述技术使用情况报告。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">记录档案：如同众多网站的做法，我们会收集某些数据，并储存于记录档案内。此类数据报括互联网通讯协议 (IP) 地址、浏览器类型、互联网服务供货商 </span><span class="s2">(ISP)</span><span class="s1">、参照</span><span class="s2">/</span><span class="s1">退出页面、操作系统、日期</span><span class="s2">/</span><span class="s1">时间戳，及</span><span class="s2">/</span><span class="s1">或点选流量数据。我们不会将此类自动收集的数据与我们收集关于您的其他数据关联。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">移动分析：我们在部分移动应用程序中，使用了移动分析软件，以让我们更了解您的手提手机上的移动软件功能。此软件可记录您使用应用程序的频率、应用程序中发生的事件，综合使用情况、效能数据以及应用程序故障的信息。我们不会将分析软件中存储的数据与您在该移动应用程序中提交的任何个人资料关联。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">地区储存 – </span><span class="s2">HTML5/Flash</span><span class="s1">：我们使用本机存放对象 </span><span class="s2">(LSO)</span><span class="s1">，如 </span><span class="s2">HTML5 </span><span class="s1">或 </span><span class="s2">Flash </span><span class="s1">存储内容及偏好选择。与我们合作且在我们的网站上提供某些功能，或根据您的网页浏览活动展示广告的第三方，亦使用 </span><span class="s2">HTML5 </span><span class="s1">或 </span><span class="s2">Flash Cookie </span><span class="s1">来收集及存储信息。各种浏览器会提供各自的管理工具以删除 </span><span class="s2">HTML5 LSO</span><span class="s1">。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1"><b>我们与谁共享您的信息？</b></span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">我们不会将任何个人信息出售给第三方。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">我们有时可能会向第三方（定义见下文）披露您的个人信息，以便提供您要求的产品或服务。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">我们可能会向本部分下文列出的第三方服务供应商和关联公司作出披露。在本部分所述的各种情况下，您可以放心，IMIKI AI仅会根据您的授权共享您的个人信息。您应当了解，在下文描述的任何情况下，当IMIKI AI与第三方服务供应商共享您的个人信息时，IMIKI AI会通过合同规定第三方的实践和义务，遵守适用的地方数据保护法。IMIKI AI会通过合同保证第三方服务供应商遵守您所属司法管辖区中适用于他们的隐私权标准。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1"><b>与我们集团和第三方服务供应商共享信息</b></span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">我们可能会在我们的设备或App中集成第三方服务供应的</span><span class="s2">SDK</span><span class="s1">（软件开发包），以向您提供产品和服务的全部功能，我们可能不时向其他的IMIKI AI关联公司（其涉及通讯、社交媒体、技术或云业务）或我们的第三方服务供应商（我们的邮寄商店、送货服务供应商、电信公司、数据中心、数据存储设施、客户服务供应商、广告和推广服务供应商、代表IMIKI AI的代理）关联公司和</span><span class="s2">/</span><span class="s1">或其他第三方（统称为“第三方服务供应商”）披露您的个人信息。此类第三方服务供应商可能代表IMIKI AI或出于上述的一项或多项目的处理您的个人信息。如果您不再希望允许我们共享这些信息，请联系我们。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1"><b>目前，我们的第三方服务供应商包括以下两大类型：</b></span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">1）分析服务类的服务供应商。除非得到您的许可，否则我们不会将您的个人身份信息（指可以识别您身份的信息，例如姓名或电子邮箱，通过这些信息可以联系到您或识别您的身份）与提供广告、分析服务的合作伙伴分享。我们会向这些合作伙伴提供有关广告覆盖面、广告点击率和有效性的信息，而不会提供您的个人身份信息，或者我们将这些信息进行汇总，以便它不会识别您个人），帮助他们了解其受众或顾客。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">2） 供应商、服务提供商和其他合作伙伴。我们将信息发送给在全球范围内支持我们业务的供应商、服务提供商和其他合作伙伴，这些支持包括提供技术基础设施服务、分析我们服务的使用方式、衡量广告和服务的有效性、提供客户服务、提供产品功能、支付便利或进行学术研究和调查。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">我们保证仅出于正当、合法、必要、特定、明确的目的共享与为您提供服务所必要的个人信息。如我们与这些第三方分享您的个人信息，我们将采取加密等手段保障您的信息安全。对我们与之共享个人信息的公司、组织，我们会对其数据安全环境进行合理审查，并与其签署严格的数据处理等协议，要求第三方对您的信息采取足够的保护措施，严格遵守相关法律法规与监管要求。您应当了解对我们的授权包括针对第三方服务供应商的子处理者。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">与其他人共享信息</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">在适用法律要求时，IMIKI AI可能会不经过进一步同意而披露您的个人信息。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1"><b>不需要同意的信息</b></span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">我们可能以汇总的形式与第三方（例如我们网站上的广告商）共享匿名信息，用于商业目的；我们可能与其共享我们服务的一般使用趋势，例如在购买某些产品或从事某些交易的特定人群中的客户数量。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">为免存疑，IMIKI AI可能在地方数据保护法明确允许的情况下和范围内（例如为了遵循传票）不经您的同意而收集、使用或披露您的个人信息，并且当我们可能会出于诚意相信为了保护我们的权利、保护您的安全或他人安全、为调查欺诈行为或对政府要求作出回应而必需披露时，不经您的同意而披露您的信息。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1"><b>安全保障</b></span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1"><b>IMIKI AI的安全措施</b></span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">我们承诺保证您的个人信息安全。为了防止未经授权的访问、披露或其他类似风险，我们落实了合理的物理、电子和管理措施流程，保护我们从您的设备上收集的信息。我们将采取所有合理的措施保护您的个人信息。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">您的个人信息全都被储存在安全的服务器上，并在受控设施中受到保护。我们依据重要性和敏感性对您的数据进行分类，并且保证您的个人信息具有合理的安全等级。同样，我们对以云为基础的数据存储设有专门的访问控制措施。总而言之，我们定期审查信息收集、储存和处理实践，包括物理安全措施，以防止任何未经授权的访问和使用。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">我们会严格甄选业务合作伙伴和服务提供商，将在个人信息保护方面的要求落实到双方的商务合同或审计、考核等活动中。我们保证通过访问这些信息来帮助向您提供产品或服务的员工和第三方服务供应商具有严格的合同保密义务，如果未能履行这些义务，其将会受到纪律处分或被终止合作。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">我们会举办安全和隐私保护培训课程、测试与宣传活动，加强员工对于保护个人信息重要性的认识。我们将采取所有可行的措施保护您的个人信息。但是，您应当意识到互联网的使用并不总是安全的，因此，我们不能保证在通过互联网双向传输时任何个人信息的安全性或完整性。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">我们将对于个人数据的泄露，及时通知相关的监管机构，并根据适用法律要求（包括您所在地的数据保护法规），通知数据主体相关的数据泄露事件。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">您能做什么！</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">您可以通过不向任何人（除非此人经您正式授权）披露您的登录密码或账号信息，您可以为IMIKI AI设置唯一的密码，以防止其他网站密码泄露危害您的账号安全。无论何时，请不要向任何人（包括自称是IMIKI AI的客服的人士）透露您收到的验证码。 无论您何时登录，尤其是在他人的计算机或公共互联网终端上登录时，在会话结束时您总应注销登出。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">我们不对因您未能保持个人信息的私密性而导致第三方访问您的个人信息进而造成的安全疏漏承担责任。尽管有上述规定，如果发生其他任何互联网用户未经授权使用您账号的情况或其他任何安全漏洞，您应当立即通知我们。 您的协助将有助于我们保护您个人信息的私密性。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1"><b>保留政策</b></span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">我们基于本隐私政策以及特定服务隐私政策中所述的信息收集的目的所必需的期间，或者遵守适用的相关法律要求保留个人信息。个人信息在完成收集目的，或在我们确认您的删除或注销申请后，或我们终止运营相应产品或服务后，我们将停止保留，并做删除或匿名化处理。如果是出于公众利益、科学、历史研究或统计的目的，我们将基于适用的法律继续保留相关数据，即使进一步的数据处理与原有的收集目的无关。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1"><b>访问您的设备上的其他功能</b></span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">我们的应用程序可能会访问您设备上的某些功能，例如Wi-Fi 网络状态，以及其他功能。这些信息用于允许这些应用程序在您的设备上运行，并且允许您与其互动。在任何时候，您可以通过在设备水平上关闭应用程序或者联系我们来撤销许可。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">您可以控制您的信息！</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1"><b>控制设置</b></span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">IMIKI AI承认每个人对隐私权的关注各不相同。因此，我们提供了一些示例，说明IMIKI AI提供的各种方式，供您选择，以限制收集、使用、披露或处理您的个人信息，并控制您的隐私权设置：</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">点击“其它设置</span><span class="s2">-</span><span class="s1">生理周期提醒”，来开启</span><span class="s2">/</span><span class="s1">关闭生理期智能预测模式；</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">打开或关闭其他处理敏感或个人信息的服务和功能。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">如果您之前因为上述目的同意我们使用您的个人信息，您可以随时联系我们来改变您的决定。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1"><b>访问、更新或更正您的个人信息</b></span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">您有权要求访问和/或更正我们持有的与您有关的任何个人信息。当您更新个人信息时，在我们处理您的请求前，会要求验证您的身份。一旦我们获得充分信息，可处理您的请求以访问或更正您的个人信息时，我们将在适用数据保护法规定的时间内对您的请求做出回应。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">我们通常免费提供这些服务，但是保留对您的数据访问请求收取合理费用的权利。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1"><b>清空数据、撤销同意</b></span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">请注意，您撤销同意会导致某些法律后果。根据您撤销同意让我们处理您的个人信息的范围，这可能表示您不能享受IMIKI AI的产品和服务。</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p2"><span class="s1">注销账号</span></p>
-<p class="p2"><span class="s1">当你在IMIKI AI内请求注销账号后，我们后台会删除你账号下的所有数据，并且账号注销后无法恢复数据。注销步骤为 打开IMIKI AI，选择【我的】-【个人资料】-【注销账号】</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">将个人信息转移到您所属的司法管辖区之外</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">我们将在中华人民共和国大陆地区运营中收集和产生的个人信息，存储在中国大陆地区的数据中心。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">若根据适用法律的规定允许跨境传输的，基于隐私政策中描述的目的，在保证满足适用法的基础上，您的数据仍可能被传输到其他数据中心，我们也可能将您的个人信息转移至第三方服务商，您的数据因而也可能被传输到其他国家或地区。</span></p>
-<p class="p1"><span class="s1">这些全球设施所在的司法管辖区可能或不能提供与您所属的司法管辖区相似的数据保护法律。您已理解在不同的数据保护法律下存在的风险有所不同，并且我们可能会向海外设施转移并存储您的个人信息。但是，这并不会改变我们对遵守本隐私政策和保护您的个人信息的所有承诺。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1"><b>其他规定</b></span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1"><b>未成年人</b></span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">我们认为监督未成年人使用我们的产品和服务是父母及监护人的责任。如果您的孩子是未满14周岁的未成年人，在您的孩子使用我们提供的产品和服务前，您作为父母或监护人必须明确同意IMIKI AI按照本隐私政策的规定收集您孩子的个人信息。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">如果父母或监护人有理由相信未成年人未经他们事先同意而向IMIKI AI提交了个人信息，请联系我们以确保删除此类个人信息，并保证未成年人取消订阅任何适用服务。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1"><b>优先顺序</b></span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">如果您同意了适用的用户协议或其他文件，并且此类文件和本隐私政策之间存在不一致，将以此类文件为准。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1"><b>隐私政策的更新</b></span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">我们会对隐私政策进行定期审核，为反映我们信息惯例的变更，我们可能会更新本隐私政策。如果我们对本隐私政策进行重大变更，我们将通过（向您账户指定的邮箱地址发送）电子邮件或在所有IMIKI AI网站公布或通过移动设备通知您，这样您可以了解我们收集的信息以及我们如何使用这些信息。此类隐私政策变化将从通知或网站规定的生效日期开始适用。我们建议您定期查阅本网页获取我们隐私权实践的最新信息。您继续使用产品和网站、手机和/或其他任何设备上的服务，将被视为接受更新的隐私政策。在我们向您收集更多的个人信息或我们希望因为新的目的使用或披露您的个人信息时，我们会再次征得您的同意。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1"><b>我是否必须同意任何第三方条款与条件？</b></span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">我们的隐私政策不适用于第三方提供的产品和服务。取决于您所使用的IMIKI AI产品和服务，其中可能包括第三方的产品和服务，涉及语音支持（含在线语音、离线语音）、分析统计、社交分享、支付服务、地图服务、推送服务、安全服务等类型，其中一些会以第三方网站的链接形式提供，还有一些会以SDK、</span><span class="s2">API</span><span class="s1">等形式接入。当您使用这些产品或服务时，也可能收集您的信息。因此，我们强烈建议您花时间阅读该第三方的隐私政策，就像阅读我们的政策一样。我们不对第三方如何使用他们向您收集的个人信息负责，也不能控制其使用。我们的隐私政策不适用通过我们的服务链接的其他网站。</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p3"><span class="s3">Google Fit：隐私政策：</span><span class="s1">http://www.google.com/policies/privacy </span><span class="s3">苹果健康：隐私政策：</span><span class="s1">https://www.apple.com/legal/privacy/szh/</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">此外，IMIKI AI中集成了下述</span><span class="s2">SDK</span><span class="s1">，当您使用这些特定产品时，</span><span class="s2">SDK</span><span class="s1">所收集的您的信息、使用目的及适用的第三方隐私政策如下所列：</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">高德地图、高德定位：需要调取您的定位权限，将收集您的设备信息、网络状态、位置信息、Wi-Fi信息，收集设备</span><span class="s2">MAC</span><span class="s1">地址、软件安装列表，</span><span class="s2">Android_ID,</span><span class="s1">传感器信息</span><span class="s2">,</span><span class="s1">设备序列号</span><span class="s2">,</span><span class="s1">读写手机外置存储信息等以便在您户外运动时为您提供地图及定位服务；</span></p>
-<p class="p1"><span class="s1">使用目的: 我们的产品集成高德地图</span><span class="s2">SDK</span><span class="s1">，获取您的位置信息，获取更准确的天气信息同步到我们的设备，收集</span><span class="s2">MAC</span><span class="s1">地址，</span><span class="s2">IMEI,Android_ID</span><span class="s1">高德地图通过分析对比，保证数据准确性和反作弊能力</span></p>
-<p class="p1"><span class="s1">高德地图隐私政策：https://cache.amap.com/h5/h5/publish/238/index.html</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1">广告SDK:</span><span class="s4">领页</span><span class="s5">SDK</span><span class="s4">，</span><span class="s2">SDK</span><span class="s1">所收集的您的信息、使用目的及适用的第三方隐私政策如下所列：</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p2"><span class="s1">我们的产品集成第三方的</span><span class="s6">SDK</span><span class="s1">，我们会向集成的</span><span class="s6">SDK</span><span class="s1">共享您的信息，具体信息内容、使用目的等详见【下表】：</span></p>
-<p class="p4"><span class="s1"><br>
-</span></p>
-<p class="p2"><span class="s1">广告平台</span><span class="s6"><span class="Apple-tab-span">	</span></span><span class="s1">开发者</span><span class="s6"><span class="Apple-tab-span">	</span></span><span class="s1">个人信息类型及字段</span><span class="s6"><span class="Apple-tab-span">	</span></span><span class="s1">使用目的和场景</span><span class="s6"><span class="Apple-tab-span">	</span></span><span class="s1">隐私政策链接</span></p>
-<p class="p2"><span class="s1">领页</span><span class="s6">SDK<span class="Apple-tab-span">	</span></span><span class="s1">上海领页信息科技有限公司</span><span class="s6"><span class="Apple-tab-span">	</span></span><span class="s1">设备信息</span></p>
-<p class="p4"><span class="s1"><br>
-</span></p>
-<p class="p2"><span class="s1">必选信息：</span></p>
-<p class="p4"><span class="s1"><br>
-</span></p>
-<p class="p2"><span class="s1">【双端】设备品牌、型号、软件系统版本、屏幕密度、屏幕分辨率、设备语言、设备时区、</span><span class="s6">sim</span><span class="s1">卡信息、</span><span class="s6">CPU</span><span class="s1">信息、可用存储空间大小等基础信息</span></p>
-<p class="p4"><span class="s1"><br>
-</span></p>
-<p class="p4"><span class="s7">【仅</span><span class="s1">Android</span><span class="s7">】</span><span class="s1">AndroidID</span><span class="s7">、</span><span class="s1">OAID</span></p>
-<p class="p4"><span class="s1"><br>
-</span></p>
-<p class="p2"><span class="s1">可选信息：</span></p>
-<p class="p4"><span class="s1"><br>
-</span></p>
-<p class="p2"><span class="s1">【双端】无线网</span><span class="s6">SSID</span><span class="s1">名称、</span><span class="s6">WiFi</span><span class="s1">路由器</span><span class="s6">MAC</span><span class="s1">地址（</span><span class="s6">BSSID</span><span class="s1">）、设备的</span><span class="s6">MAC</span><span class="s1">地址（如为</span><span class="s6">iOS</span><span class="s1">端，则仅适用于</span><span class="s6">IOS3200</span><span class="s1">以下版本）</span></p>
-<p class="p4"><span class="s1"><br>
-</span></p>
-<p class="p2"><span class="s1">【仅</span><span class="s6">Android</span><span class="s1">】设备标识符（如</span><span class="s6">IMEI</span><span class="s1">、</span><span class="s6">IMSI</span><span class="s1">、</span><span class="s6">GAID</span><span class="s1">（仅</span><span class="s6">GMS</span><span class="s1">服务）、</span><span class="s6">MEID</span><span class="s1">、设备序列号</span><span class="s6">build_serial</span><span class="s1">，具体字段因软硬件版本不同而存在差异）</span></p>
-<p class="p4"><span class="s1"><br>
-</span></p>
-<p class="p4"><span class="s1"><br>
-</span></p>
-<p class="p2"><span class="s1">网络信息：</span></p>
-<p class="p4"><span class="s1"><br>
-</span></p>
-<p class="p2"><span class="s1">必选信息：</span></p>
-<p class="p4"><span class="s1"><br>
-</span></p>
-<p class="p2"><span class="s1">【双端】</span><span class="s6">IP</span><span class="s1">地址、运营商信息、</span><span class="s6">Wi-Fi</span><span class="s1">状态、网络信号强度</span></p>
-<p class="p4"><span class="s1"><br>
-</span></p>
-<p class="p2"><span class="s1">应用信息</span></p>
-<p class="p4"><span class="s1"><br>
-</span></p>
-<p class="p2"><span class="s1">必选信息：</span></p>
-<p class="p4"><span class="s1"><br>
-</span></p>
-<p class="p2"><span class="s1">【仅</span><span class="s6">Android</span><span class="s1">】应用包名、运行中的进程信息、版本号、应用前后台状态</span></p>
-<p class="p4"><span class="s1"><br>
-</span></p>
-<p class="p2"><span class="s1">可选信息：</span></p>
-<p class="p4"><span class="s1"><br>
-</span></p>
-<p class="p2"><span class="s1">【仅</span><span class="s6">Android</span><span class="s1">】软件列表信息</span></p>
-<p class="p4"><span class="s1"><br>
-</span></p>
-<p class="p2"><span class="s1">传感器信息</span><span class="s6"> </span><span class="s1">必选信息：</span></p>
-<p class="p4"><span class="s1"><br>
-</span></p>
-<p class="p2"><span class="s1">【仅</span><span class="s6">Android</span><span class="s1">】加速度传感器、陀螺仪传感器、线性加速度传感器、磁场传感器、旋转矢量传感器</span></p>
-<p class="p4"><span class="s1"><br>
-</span></p>
-<p class="p4"><span class="s1"><br>
-</span></p>
-<p class="p2"><span class="s1">广告信息</span><span class="s6"> </span><span class="s1">必选信息：</span></p>
-<p class="p4"><span class="s1"><br>
-</span></p>
-<p class="p2"><span class="s1">【双端】对广告的展示、点击及转化等交互数据</span></p>
-<p class="p4"><span class="s1"><br>
-</span></p>
-<p class="p2"><span class="s1">位置信息</span><span class="s6"> </span><span class="s1">可选信息：</span></p>
-<p class="p4"><span class="s1"><br>
-</span></p>
-<p class="p2"><span class="s1">【双端】精确位置信息、粗略位置信息</span></p>
-<p class="p4"><span class="s1"><br>
-</span></p>
-<p class="p2"><span class="s1">性能数据</span><span class="s6"> </span><span class="s1">必选信息</span></p>
-<p class="p4"><span class="s1"><br>
-</span></p>
-<p class="p2"><span class="s1">【双端】如崩溃数据、性能数据</span></p>
-<p class="p4"><span class="s1"><br>
-</span></p>
-<p class="p2"><span class="s1">权限获取列表，具体以《穿山甲广告</span><span class="s6">SDK</span><span class="s1">应用权限申请与使用情况说》为准：</span></p>
-<p class="p4"><span class="s1"><br>
-</span></p>
-<p class="p2"><span class="s1">【可选】读取手机设备标识等信息</span></p>
-<p class="p4"><span class="s1"><br>
-</span></p>
-<p class="p2"><span class="s1">【可选】获取粗略地理位置信息</span></p>
-<p class="p4"><span class="s1"><br>
-</span></p>
-<p class="p2"><span class="s1">【可选】获取精确地理位置信息</span></p>
-<p class="p4"><span class="s1"><br>
-</span></p>
-<p class="p2"><span class="s1">【可选】允许应用程序写入外部存储【可选】允许应用程序读取外部存储</span></p>
-<p class="p4"><span class="s1"><br>
-</span></p>
-<p class="p2"><span class="s1">【可选】获取应用软件列表</span><span class="s6"><span class="Apple-tab-span">	</span>1. </span><span class="s1">基于用户设备信息调整广告投放策略</span></p>
-<p class="p2"><span class="s6">2. </span><span class="s1">基于用户设备信息分析广告行为</span><span class="s6">(</span><span class="s1">如广告加载、展示、点击等）</span></p>
-<p class="p2"><span class="s6">3.</span><span class="s1">反作弊</span><span class="s6"><span class="Apple-tab-span">	</span></span><span class="s1">上海领页</span><span class="s6">SDK</span><span class="s1">隐私政策</span></p>
-<p class="p2"><span class="s1">应用的《隐私政策》您也可以参考市场监管总局发布的《信息安全技术个人信息安全规范》文件中的隐私政策模板，进行实现。</span></p>
-<p class="p2"><span class="s1">您可以通过访问</span><span class="s6"> </span><span class="s1">《领页隐私政策》</span><span class="s6"> </span><span class="s1">进一步了解领页的隐私政策，以及了解领页对个人信息的处理和保护策略。</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">&nbsp;</span>SDK 隐私链接:https://document.wxcjgg.cn/#VWlU5-privacy</span></p>
-<p class="p1"><span class="s1">&nbsp;</span></p>
-<p class="p1"><span class="s1">感谢您花时间了解我们的隐私政策！</span></p>
-<p class="p5"><span class="s1">&nbsp;</span></p>
-
-
-</body></html>
+    <header>
+        <h1>IMIKI AI 隐私政策</h1>
+        <p>生效日期：2025年12月31日</p>
+    </header>
+    
+    <main>
+        <div class="chapter">
+            <h2>第一章 总则</h2>
+            
+            <div class="section">
+                <div class="section-title">1.1 [制定依据]</div>
+                <p>本政策依据欧盟《通用数据保护条例》(GDPR)、美国《加州消费者隐私法案》(CCPA/CPRA)、《中华人民共和国个人信息保护法》以及销售区域（欧洲、美国）其他相关数据保护法规制定，旨在明确我们及合作的第三方处理您个人信息的规则，保障您的信息权益和数据主体权利。</p>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">1.2 适用范围</div>
+                <p>本政策适用于您使用智能摄像眼镜（以下简称"智能眼镜"）及配套APP（以下简称"本APP"）的全过程，主要涵盖"AI交互信息上传"场景。您使用智能眼镜拍摄或录制的照片、音频、视频文件默认存储于眼镜或配对手机本地，我们不会主动收集或上传。仅在您为获取特定智能服务（如AI问答、图像识别、多语言翻译）而主动启用时，相关个人信息才会传输至第三方AI服务器。</p>
+            </div>
+        </div>
+        
+        <div class="chapter">
+            <h2>第二章 AI交互场景个人信息处理规则</h2>
+            
+            <div class="section">
+                <div class="section-title">2.1 信息收集范围与目的（最小必要原则）</div>
+                <p>仅当您主动触发以下智能功能时，我们才会向第三方AI服务器传输相应信息，且该等信息仅用于生成服务结果，不包含您的姓名、电话号码、设备通讯录等无关个人信息。</p>
+                
+                <ul>
+                    <li><strong>AI问答功能：</strong>仅上传您输入的文本内容或语音片段，语音将在传输前实时转换为文字，原始音频仅在本地设备临时处理。用于第三方服务器理解请求并返回答案。</li>
+                    <li><strong>图像识别功能：</strong>仅上传您主动选择识别的图像。上传前，APP将自动对图像进行去标识化处理，移除可能存在的面部特征、身份证号、街道地址、车牌号等敏感信息，仅保留与识别目标相关的图像特征数据。</li>
+                    <li><strong>多语言翻译功能（含对话翻译和同声传译）：</strong>仅上传您需要翻译的文本片段或实时转录的语音。该等内容在翻译完成后会及时从第三方服务器删除。</li>
+                </ul>
+                
+                <div class="highlight">
+                    <strong>特别说明：</strong>存储在您智能眼镜或配对手机本地的照片、录音、视频不会自动上传至任何服务器，除非您主动点击分享按钮。您可通过设备本地存储管理功能完全自主控制这些文件。
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">2.2 第三方服务合作与数据保护</div>
+                
+                <h3>2.2.1</h3>
+                <p>为实现本APP前述智能交互功能，我们与以下第三方AI服务提供商（数据处理者）合作。所有合作均符合GDPR第28条及CCPA要求：</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>第三方名称</th>
+                            <th>服务内容</th>
+                            <th>官方网站链接</th>
+                            <th>合规资质</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>【ChatGPT】</td>
+                            <td>AI智能问答、基于图像的物体识别</td>
+                            <td><a href="https://chatgpt.com/" target="_blank">https://chatgpt.com/</a></td>
+                            <td>GDPR、SOC 2</td>
+                        </tr>
+                        <tr>
+                            <td>【Microsoft Cognitive Services Speech】</td>
+                            <td>对话翻译、同声传译、语音合成、语音转录</td>
+                            <td><a href="https://learn.microsoft.com/zh-cn/azure/ai-services/speech-service/" target="_blank">https://learn.microsoft.com/zh-cn/azure/ai-services/speech-service/</a></td>
+                            <td>ISO/IEC 27001、SOC 1, SOC 2, SOC 3、GDPR、HIPAA</td>
+                        </tr>
+                        <tr>
+                            <td>【Google Play Services】</td>
+                            <td>位置信息</td>
+                            <td><a href="https://developers.google.com/android/reference/com/google/android/gms/location/package-summary" target="_blank">https://developers.google.com/android/reference/com/google/android/gms/location/package-summary</a></td>
+                            <td>ISO/IEC 27001、ISO/IEC 27017 & 27018、ISO/IEC 27701、SOC 1 / SOC 2 / SOC 3、GDPR</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>2.2.2</h3>
+                <p>我们与前述第三方已签订《数据处理附录》及《GDPR标准合同条款》（2021版SCCs），明确约定：</p>
+                <ul>
+                    <li>第三方仅能在我们书面指示范围内处理信息；</li>
+                    <li>不得保留、再利用或将您的信息转移给其他方；</li>
+                    <li>第三方必须实施符合ISO27001的安全措施，并定期向我们提交数据处理合规报告。</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">2.3 您的权利及行使方式</div>
+                <ul>
+                    <li><strong>访问权/登录控制权：</strong>您可选择是否注册并提供个人信息，也可跳过登录窗口直接连接设备使用。</li>
+                    <li><strong>知情权/查询权：</strong>您有权查询使用本产品过程中产生的个人信息，包括本地存储的文件数据、设备操作记录、设备配置信息，以及传输至第三方AI服务器的相关信息。</li>
+                    <li><strong>删除权：</strong>您可通过设备文件管理或配套App的本地数据清理功能，自主删除所有本地存储的个人可识别信息。</li>
+                    <li><strong>更正权：</strong>如发现个人信息（如设备适配信息、授权设置等）有错误或不完整，您可通过配套App中"我的-个人信息管理"页面进行更正。</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">2.4 数据安全措施</div>
+                <ul>
+                    <li><strong>本地数据安全：</strong>智能眼镜及绑定手机本地存储采用分区加密机制，仅授权产品应用可访问相关数据，禁止其他第三方应用读取。支持设备锁屏密码及生物识别验证（如指纹、人脸识别），防止设备丢失或被盗导致数据泄露。</li>
+                    <li><strong>数据传输安全：</strong>"AI问答、图像识别、对话翻译、同声传译"功能数据传输过程中，采用TLS 1.3加密协议进行端到端加密，防止传输过程中数据被窃取或篡改。建立数据校验机制，确保数据完整性和准确性。</li>
+                    <li><strong>第三方服务器数据安全管控：</strong>我们与AI服务提供商签订严格的数据安全协议，明确要求其对存储的传输数据使用AES-256加密，建立分级访问控制机制，并确保符合《中华人民共和国个人信息保护法》《数据安全法》等法律法规要求。</li>
+                    <li><strong>安全事件响应：</strong>我们建立了完善的数据安全事件应急预案。如发生数据泄露、篡改、丢失等安全事件，将立即启动应急预案，实施数据隔离、漏洞修补、信息溯源等补救措施。按照法律法规要求，我们将于72小时内通过App推送、短信或电话等方式及时向您告知。</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">2.5 政策更新与通知</div>
+                <p>本政策更新后，我们将通过APP弹窗、电子邮件或官网公告等方式通知您。涉及核心权益变更的，将提供30天考虑期。您继续使用服务即视为接受更新后的政策。</p>
+                <p class="last-updated">本政策最后更新日期：2025年12月31日</p>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">2.6 联系我们</div>
+                <div class="contact-info">
+                    <p>如您对本隐私政策有任何疑问或希望行使本隐私政策下的权利，请通过以下方式联系我们：</p>
+                    <p><strong>邮箱：</strong> <a href="mailto:help@imikilife.com">help@imikilife.com</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>© 2025 IMIKI AI. 保留所有权利。</p>
+        <p>本隐私政策版本：2025年12月31日版</p>
+    </footer>
+</body>
+</html>

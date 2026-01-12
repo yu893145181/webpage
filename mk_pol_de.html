@@ -1,305 +1,417 @@
 <!DOCTYPE html>
-<html lang="de"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datenschutzrichtlinie - KI-Chat-App</title>
+    <title>IMIKI AI Datenschutzrichtlinie</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
             color: #333;
-            background-color: #f9f9f9;
+            background-color: #f8f9fa;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
         }
-        .container {
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #2c3e50;
+        
+        header {
             text-align: center;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 10px;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e0e0e0;
         }
-        h2 {
-            color: #34495e;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            border-left: 4px solid #3498db;
-            padding-left: 15px;
-        }
-        h3 {
-            color: #2c3e50;
-            margin-top: 25px;
+        
+        h1 {
+            color: #1a237e;
+            font-size: 2.2rem;
             margin-bottom: 10px;
         }
-        p {
+        
+        h2 {
+            color: #283593;
+            font-size: 1.6rem;
+            margin-top: 30px;
             margin-bottom: 15px;
-            text-align: justify;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e0e0e0;
         }
+        
+        h3 {
+            color: #3949ab;
+            font-size: 1.3rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .last-updated {
+            color: #666;
+            font-style: italic;
+            text-align: right;
+            margin-top: 10px;
+        }
+        
+        .chapter {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+        
+        .section {
+            margin-bottom: 20px;
+        }
+        
+        .section-title {
+            font-weight: bold;
+            color: #444;
+            margin-bottom: 8px;
+        }
+        
         ul, ol {
-            margin-bottom: 15px;
             padding-left: 25px;
+            margin-bottom: 15px;
         }
+        
         li {
             margin-bottom: 8px;
         }
-        .definition {
-            background-color: #ecf0f1;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 15px 0;
-        }
-        .important {
-            background-color: #fff3cd;
-            border: 1px solid #ffeaa7;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 15px 0;
-        }
-        .contact-info {
-            background-color: #e8f5e8;
-            padding: 15px;
-            border-radius: 5px;
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
             margin: 20px 0;
-            border-left: 4px solid #27ae60;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
-        .footer {
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #f1f5fd;
+            color: #1a237e;
+            font-weight: 600;
+        }
+        
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+        
+        a {
+            color: #3949ab;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .highlight {
+            background-color: #fffde7;
+            padding: 15px;
+            border-left: 4px solid #ffd600;
+            margin: 20px 0;
+        }
+        
+        .contact-info {
+            background-color: #e8f5e9;
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 20px;
+        }
+        
+        footer {
             text-align: center;
             margin-top: 40px;
             padding-top: 20px;
-            border-top: 1px solid #bdc3c7;
-            color: #7f8c8d;
-            font-size: 14px;
+            border-top: 1px solid #e0e0e0;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .compliance-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .badge {
+            background-color: #e8eaf6;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            color: #3949ab;
+        }
+        
+        .german-flag {
+            display: inline-block;
+            width: 20px;
+            height: 12px;
+            background: linear-gradient(to bottom, 
+                #000000 33%, 
+                #dd0000 33%, 66%, 
+                #ffcc00 66%);
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+        
+        .language-selector {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .lang-btn {
+            background: #f1f5fd;
+            border: 1px solid #3949ab;
+            color: #3949ab;
+            padding: 8px 16px;
+            margin: 0 5px;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .lang-btn.active {
+            background: #3949ab;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .chapter {
+                padding: 15px;
+            }
+            
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            .lang-btn {
+                display: block;
+                margin: 5px auto;
+                width: 200px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Datenschutzrichtlinie</h1>
+    <header>
+        <div class="language-selector">
+            <a href="#deutsch" class="lang-btn active">
+                <span class="german-flag"></span>Deutsch
+            </a>
+            <a href="privacy-policy-en.html" class="lang-btn">English</a>
+            <a href="privacy-policy-zh.html" class="lang-btn">中文</a>
+        </div>
         
-        <p>IMIKI AI ("wir", "unser" oder "uns") ist dem Schutz Ihrer Privatsphäre verpflichtet. Diese Datenschutzrichtlinie erklärt, wie IMIKI AI Ihre persönlichen Informationen für die KI-Chat-Anwendung sammelt, verwendet und offenlegt.</p>
+        <h1>IMIKI AI Datenschutzrichtlinie</h1>
+        <p>Gültig ab: 31. Dezember 2025</p>
+    </header>
+    
+    <main>
+        <div class="chapter">
+            <h2>Kapitel 1: Allgemeine Bestimmungen</h2>
+            
+            <div class="section">
+                <div class="section-title">1.1 [Erstellungsgrundlage]</div>
+                <p>Diese Richtlinie wird gemäß der EU-Datenschutz-Grundverordnung (DSGVO), dem California Consumer Privacy Act (CCPA/CPRA), dem Personal Information Protection Law der Volksrepublik China und anderen relevanten Datenschutzvorschriften in den Vertriebsregionen (Europa, USA) erstellt. Sie soll die Regeln für die Verarbeitung Ihrer personenbezogenen Daten durch uns und unsere kooperierenden Drittanbieter klären und Ihre Informationsrechte und Betroffenenrechte schützen.</p>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">1.2 Anwendungsbereich</div>
+                <p>Diese Richtlinie gilt für den gesamten Prozess Ihrer Nutzung der Smart Camera Glasses (im Folgenden "Smart Glasses" genannt) und der unterstützenden APP (im Folgenden "diese APP" genannt). Sie deckt primär das Szenario "KI-Interaktionsinformationen-Upload" ab. Fotos, Audio- und Videodateien, die Sie mit den Smart Glasses aufnehmen oder aufzeichnen, werden standardmäßig lokal auf den Gläsern oder dem gekoppelten Telefon gespeichert; wir sammeln oder laden sie nicht aktiv hoch. Personenbezogene Daten werden nur dann an Drittanbieter-KI-Server übertragen, wenn dies notwendig ist, um die von Ihnen aktivierten spezifischen intelligenten Dienste bereitzustellen, wie KI-Fragen und -Antworten, Bilderkennung und mehrsprachige Übersetzung.</p>
+            </div>
+        </div>
         
-        <p>Diese Datenschutzrichtlinie gilt für unsere Website und deren zugehörige Subdomains (zusammen unseren "Service") sowie unsere Anwendung, KI-Chat. Durch den Zugriff auf oder die Nutzung unseres Services bestätigen Sie, dass Sie diese Datenschutzrichtlinie und unsere Nutzungsbedingungen gelesen, verstanden und damit einverstanden sind, dass wir Ihre persönlichen Informationen wie beschrieben sammeln, speichern, verwenden und offenlegen.</p>
-
-        <h2>Definitionen und Schlüsselbegriffe</h2>
-        <p>Um die Dinge in dieser Datenschutzrichtlinie so klar wie möglich zu erklären, werden alle diese Begriffe wie folgt streng definiert:</p>
-        
-        <div class="definition">
-            <ul>
-                <li><strong>Cookie:</strong> Eine kleine Datenmenge, die von einer Website generiert und von Ihrem Webbrowser gespeichert wird. Es wird verwendet, um Ihren Browser zu identifizieren, Analysen bereitzustellen und Informationen über Sie zu speichern, wie Ihre Sprachpräferenz oder Anmeldedaten.</li>
-                <li><strong>Unternehmen:</strong> Wenn diese Richtlinie "Unternehmen", "wir", "uns" oder "unser" erwähnt, bezieht sie sich auf IMIKI AI, das für Ihre Informationen unter dieser Datenschutzrichtlinie verantwortlich ist.</li>
-                <li><strong>Land:</strong> Wo KI-Chat oder die Eigentümer/Gründer von KI-Chat ansässig sind, in diesem Fall Rumänien.</li>
-                <li><strong>Kunde:</strong> Bezieht sich auf das Unternehmen, die Organisation oder die Person, die sich für die Nutzung des KI-Chat Plus Service anmeldet, um Beziehungen zu Verbrauchern oder Dienstnutzern zu verwalten.</li>
-                <li><strong>Gerät:</strong> Jedes internetfähige Gerät wie ein Telefon, Tablet, Computer oder ein anderes Gerät, das verwendet werden kann, um KI-Chat zu besuchen und die Dienste zu nutzen.</li>
-                <li><strong>IP-Adresse:</strong> Jedes mit dem Internet verbundene Gerät erhält eine Nummer, die als Internetprotokoll-Adresse (IP-Adresse) bekannt ist. Diese Nummern werden normalerweise in geografischen Blöcken zugewiesen. Eine IP-Adresse kann oft den Standort identifizieren, von dem aus ein Gerät eine Verbindung zum Internet herstellt.</li>
-                <li><strong>Personal:</strong> Bezieht sich auf die Personen, die von KI-Chat angestellt sind oder im Auftrag einer der Vertragsparteien Dienstleistungen erbringen.</li>
-                <li><strong>Personenbezogene Daten:</strong> Alle Informationen, die direkt, indirekt oder im Zusammenhang mit anderen Informationen - einschließlich einer persönlichen Identifikationsnummer - die Identifizierung oder Identifizierbarkeit einer natürlichen Person ermöglichen.</li>
-                <li><strong>Service:</strong> Bezieht sich auf den von KI-Chat bereitgestellten Service, wie in den relevanten Bedingungen (falls verfügbar) und auf dieser Plattform beschrieben.</li>
-                <li><strong>Sie:</strong> Eine Person oder Einheit, die bei KI-Chat registriert ist, um die Dienste zu nutzen.</li>
-            </ul>
+        <div class="chapter">
+            <h2>Kapitel 2: Regeln zur Verarbeitung personenbezogener Daten für KI-Interaktionsszenarien</h2>
+            
+            <div class="section">
+                <div class="section-title">2.1 Umfang und Zweck der Informationserfassung (Grundsatz der Datensparsamkeit)</div>
+                <p>Wir übertragen entsprechende Informationen nur dann an Drittanbieter-KI-Server, wenn Sie die folgenden intelligenten Funktionen aktiv auslösen. Diese Informationen werden ausschließlich zur Generierung der Dienstleistungsergebnisse verwendet und enthalten keine unbezogenen personenbezogenen Daten wie Ihren Namen, Ihre Telefonnummer oder Gerätekontakte.</p>
+                
+                <ul>
+                    <li><strong>KI-Fragen-und-Antworten-Funktion:</strong> Es wird nur der von Ihnen eingegebene Textinhalt oder das Sprachsegment hochgeladen. Sprache wird vor der Übertragung in Echtzeit in Text umgewandelt; das Original-Audio wird nur temporär auf dem lokalen Gerät verarbeitet. Dies wird vom Drittanbieter-Server verwendet, um die Anfrage zu verstehen und eine Antwort zurückzugeben.</li>
+                    <li><strong>Bilderkennungsfunktion:</strong> Nur das Bild, das Sie aktiv zur Erkennung auswählen, wird hochgeladen. Vor dem Upload entfernt die APP automatisch sensible Informationen wie Gesichter, Ausweisnummern, Straßenadressen und Kennzeichen, die möglicherweise vorhanden sind, und behält nur Bildmerkmaldaten bei, die für das Erkennungsziel relevant sind.</li>
+                    <li><strong>Mehrsprachige Übersetzungsfunktion (einschließlich Dialogübersetzung und Simultandolmetschen):</strong> Es wird nur das zu übersetzende Textfragment oder die in Echtzeit transkribierte Sprache hochgeladen. Dieser Inhalt wird nach Abschluss der Übersetzung umgehend vom Drittanbieter-Server gelöscht.</li>
+                </ul>
+                
+                <div class="highlight">
+                    <strong>Besonderer Hinweis:</strong> Fotos, Audioaufnahmen und Videos, die lokal auf Ihren Smart Glasses oder Ihrem gekoppelten Telefon gespeichert sind, werden nicht automatisch auf einen Server hochgeladen, es sei denn, Sie klicken aktiv auf die Freigabe-Schaltfläche. Sie haben über die lokalen Speicherverwaltungsfunktionen des Geräts die volle Kontrolle über diese Dateien.
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">2.2 Zusammenarbeit mit Drittanbietern und Datenschutz</div>
+                
+                <h3>2.2.1</h3>
+                <p>Um die vorgenannten intelligenten Interaktionsfunktionen dieser APP zu ermöglichen, arbeiten wir mit folgenden Drittanbieter-KI-Dienstleistern (Datenverarbeitern) zusammen. Alle Kooperationen entsprechen den Anforderungen von DSGVO Artikel 28 und CCPA:</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Drittanbietername</th>
+                            <th>Dienstleistungsinhalt</th>
+                            <th>Offizielle Website</th>
+                            <th>Compliance-Zertifikate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>【ChatGPT】</td>
+                            <td>KI-gestützte Fragenbeantwortung und bildbasierte Objekterkennung</td>
+                            <td><a href="https://chatgpt.com/" target="_blank">https://chatgpt.com/</a></td>
+                            <td>
+                                <div class="compliance-badges">
+                                    <span class="badge">DSGVO</span>
+                                    <span class="badge">SOC 2</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>【Microsoft Cognitive Services Speech】</td>
+                            <td>Dialogübersetzung, Simultandolmetschen, Sprachsynthese, Spracherkennung</td>
+                            <td><a href="https://learn.microsoft.com/de-de/azure/ai-services/speech-service/" target="_blank">https://learn.microsoft.com/de-de/azure/ai-services/speech-service/</a></td>
+                            <td>
+                                <div class="compliance-badges">
+                                    <span class="badge">ISO/IEC 27001</span>
+                                    <span class="badge">SOC 1</span>
+                                    <span class="badge">SOC 2</span>
+                                    <span class="badge">SOC 3</span>
+                                    <span class="badge">DSGVO</span>
+                                    <span class="badge">HIPAA</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>【Google Play Services】</td>
+                            <td>Standortinformationen</td>
+                            <td><a href="https://developers.google.com/android/reference/com/google/android/gms/location/package-summary" target="_blank">https://developers.google.com/android/reference/com/google/android/gms/location/package-summary</a></td>
+                            <td>
+                                <div class="compliance-badges">
+                                    <span class="badge">ISO/IEC 27001</span>
+                                    <span class="badge">ISO/IEC 27017 & 27018</span>
+                                    <span class="badge">ISO/IEC 27701</span>
+                                    <span class="badge">SOC 1 / SOC 2 / SOC 3</span>
+                                    <span class="badge">DSGVO</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>2.2.2</h3>
+                <p>Wir haben mit den vorgenannten Drittanbietern Datenverarbeitungszusätze und DSGVO-Standardvertragsklauseln (SCCs 2021-Version) unterzeichnet, die ausdrücklich festlegen, dass:</p>
+                <ul>
+                    <li>Drittanbieter Informationen nur im Rahmen unserer schriftlichen Anweisungen verarbeiten dürfen.</li>
+                    <li>Sie Ihre Informationen nicht behalten, wiederverwenden oder an andere Parteien weitergeben dürfen.</li>
+                    <li>Drittanbieter Sicherheitsmaßnahmen implementieren müssen, die ISO27001 entsprechen, und uns regelmäßig Compliance-Berichte zur Datenverarbeitung vorlegen müssen.</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">2.3 Ihre Rechte und wie Sie sie ausüben können</div>
+                <ul>
+                    <li><strong>Recht auf Zugang/Login-Kontrolle:</strong> Sie können wählen, ob Sie sich registrieren und personenbezogene Daten angeben möchten oder das Login-Fenster überspringen und das Gerät direkt zur Nutzung verbinden möchten.</li>
+                    <li><strong>Recht auf Auskunft/Abfrage:</strong> Sie haben das Recht, die während Ihrer Nutzung dieses Produkts generierten personenbezogenen Daten abzufragen, einschließlich lokal gespeicherter Dateidaten, Gerätebetriebsprotokolle und Gerätekonfigurationsinformationen sowie relevanter Informationen, die an Drittanbieter-KI-Server übertragen wurden.</li>
+                    <li><strong>Recht auf Löschung:</strong> Sie können alle lokal gespeicherten personenbezogenen Daten unabhängig über die Dateiverwaltung des Geräts oder die lokalen Datenbereinigungsfunktionen der unterstützenden App löschen.</li>
+                    <li><strong>Recht auf Berichtigung:</strong> Wenn Sie Fehler oder Unvollständigkeiten in Ihren personenbezogenen Daten (z.B. Geräteanpassungsinformationen, Autorisierungseinstellungen) feststellen, können Sie Korrekturen über die Seite "Ich - Personenbezogene Datenverwaltung" in der unterstützenden App vornehmen.</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">2.4 Datensicherheitsmaßnahmen</div>
+                <ul>
+                    <li><strong>Lokale Datensicherheit:</strong> Die lokale Speicherung auf den Smart Glasses und dem gebundenen Mobiltelefon nutzt partitionierte Verschlüsselungsmechanismen. Nur die autorisierte Produktanwendung kann auf relevante Daten zugreifen; das Lesen durch andere Drittanbieteranwendungen ist verboten. Die Unterstützung von Gerätsperrbildschirm-Passwörtern und biometrischer Authentifizierung (z.B. Fingerabdruck, Gesichtserkennung) verhindert Datenlecks bei Verlust oder Diebstahl des Geräts.</li>
+                    <li><strong>Datenübertragungssicherheit:</strong> Während der Datenübertragung für die Funktionen "KI-Fragen und -Antworten, Bilderkennung, Dialogübersetzung, Simultandolmetschen" wird das TLS 1.3-Verschlüsselungsprotokoll für Ende-zu-Ende-Verschlüsselung verwendet, um Datendiebstahl oder -manipulation während der Übertragung zu verhindern. Ein Datenvalidierungsmechanismus gewährleistet Datenintegrität und -genauigkeit.</li>
+                    <li><strong>Drittanbieter-Server-Datensicherheitskontrolle:</strong> Wir schließen strenge Datensicherheitsvereinbarungen mit KI-Dienstleistern ab, die ausdrücklich vorschreiben, dass sie AES-256-Verschlüsselung für gespeicherte übertragene Daten verwenden, abgestufte Zugriffskontrollmechanismen einrichten und die Anforderungen von Gesetzen und Vorschriften wie dem Personal Information Protection Law und dem Data Security Law der Volksrepublik China einhalten müssen.</li>
+                    <li><strong>Sicherheitsvorfallreaktion:</strong> Wir haben einen umfassenden Datensicherheitsvorfall-Reaktionsplan etabliert. Im Falle eines Sicherheitsvorfalls wie eines Datenlecks, einer Manipulation oder eines Verlusts wird der Notfallplan sofort aktiviert, und es werden Abhilfemaßnahmen wie Datenisolierung, Schwachstellenbehebung und Informationsverfolgung implementiert. Wie gesetzlich vorgeschrieben, werden wir Sie innerhalb von 72 Stunden umgehend per App-Push-Benachrichtigung, SMS oder Telefonanruf benachrichtigen.</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">2.5 Richtlinienaktualisierungen und Benachrichtigung</div>
+                <p>Nach Aktualisierungen dieser Richtlinie werden wir Sie über APP-Pop-ups, E-Mail oder Ankündigungen auf der offiziellen Website benachrichtigen. Für Änderungen, die Kernrechte und -interessen betreffen, wird eine 30-tägige Überlegungsfrist gewährt. Ihre fortgesetzte Nutzung der Dienste gilt als Annahme der aktualisierten Richtlinie.</p>
+                <p class="last-updated">Letztes Aktualisierungsdatum dieser Richtlinie: 31. Dezember 2025</p>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">2.6 Kontaktieren Sie uns</div>
+                <div class="contact-info">
+                    <p>Wenn Sie Fragen haben oder Ihre Rechte gemäß dieser Datenschutzrichtlinie ausüben möchten, kontaktieren Sie uns bitte unter:</p>
+                    <p><strong>E-Mail:</strong> <a href="mailto:help@imikilife.com">help@imikilife.com</a></p>
+                    <p><strong>Für EU-Bürger:</strong> Sie können sich auch an unseren EU-Datenschutzbeauftragten wenden unter: <a href="mailto:gdpr@imikilife.com">gdpr@imikilife.com</a></p>
+                </div>
+            </div>
         </div>
+    </main>
+    
+    <footer>
+        <p>© 2025 IMIKI AI. Alle Rechte vorbehalten.</p>
+        <p>Diese Datenschutzrichtlinie entspricht den Anforderungen der EU-DSGVO und anderen relevanten Datenschutzgesetzen.</p>
+        <p>Datenschutzrichtlinien-Version: 31. Dezember 2025</p>
+    </footer>
 
-        <h2>Automatisch gesammelte Informationen</h2>
-        <p>Es gibt einige Informationen wie Ihre Internetprotokoll-Adresse (IP-Adresse) und/oder Browser- und Geräteeigenschaften, die automatisch gesammelt werden, wenn Sie unsere Plattform besuchen. Diese Informationen können verwendet werden, um Ihren Computer mit dem Internet zu verbinden. Andere automatisch gesammelte Informationen könnten Anmeldedaten, E-Mail-Adresse, Passwort, Computer- und Verbindungsinformationen wie Browser-Plug-in-Typen und Versionen sowie Zeitzoneneinstellungen, Betriebssysteme und Plattformen, Kaufhistorie (wir aggregieren manchmal mit ähnlichen Informationen anderer Benutzer), der vollständige Uniform Resource Locator (URL)-Clickstream zu, durch und von unserer Website, der Datum und Uhrzeit enthalten kann; Cookie-Nummer; Teile der Seite, die Sie angesehen oder nach denen Sie gesucht haben; und die Telefonnummer, die Sie für unseren Kundendienst verwendet haben.</p>
-
-        <p>Wir können auch Browserdaten wie Cookies, Flash-Cookies (auch bekannt als Flash Local Shared Objects) oder ähnliche Daten auf bestimmten Teilen unserer Website für Betrugsprävention und andere Zwecke verwenden. Während Ihrer Besuche können wir Software-Tools wie JavaScript verwenden, um Sitzungsinformationen einschließlich Seitenantwortzeiten, Download-Fehler, Besuchsdauer bestimmter Seiten, Seiteninteraktionsinformationen (wie Scrollen, Klicks und Mouse-Overs) und Methoden zum Verlassen der Seite zu messen und zu sammeln. Wir können auch technische Informationen sammeln, um uns bei der Identifizierung Ihres Geräts für Betrugsprävention und Diagnosezwecke zu helfen.</p>
-
-        <div class="important">
-            <p><strong>Wichtiger Hinweis:</strong> Wir sammeln automatisch bestimmte Informationen, wenn Sie die Plattform besuchen, nutzen oder navigieren. Diese Informationen geben nicht Ihre spezifische Identität preis (wie Ihren Namen oder Kontaktinformationen), können jedoch Geräte- und Nutzungsinformationen enthalten, wie Ihre IP-Adresse, Browser- und Geräteeigenschaften, Betriebssystem, Sprachpräferenzen, Verweis-URLs, Gerätename, Land, Standort, Informationen darüber, wer und wann Sie unsere Dienste nutzen, und andere technische Informationen. Diese Informationen werden in erster Linie benötigt, um die Sicherheit und den Betrieb unserer Plattform aufrechtzuerhalten, sowie für unsere internen Analysen und Berichterstattung.</p>
-        </div>
-
-        <h2>Sammlung personenbezogener Daten und Methode</h2>
-        <p>KI-Chat kann Ihre personenbezogenen Daten für die in dieser Datenschutzrichtlinie angegebenen Zwecke verarbeiten. Die von der KI-Chat-App gesammelten und verwendeten personenbezogenen Daten der Benutzer sind insbesondere: Telefonnummer, die wir erhalten, sobald Sie KI-Chat-App kontaktieren, und eine Kennung für Werbetreibende, die in Ihrem Mobilgerät bezeichnet wird, das für den Zugriff auf unsere Dienste verwendet wird (The Identifier for Advertisers-IDFA), die Kennung für Anbieter/Entwickler, die in Ihrem Mobilgerät bezeichnet wird (The Identifier for Vendors-IDVF) und Internetprotokoll-Adresse-IP-Adresse).</p>
-
-        <h3>Datenkategorien und Datentypen</h3>
-        <ul>
-            <li><strong>Kontaktinformationen:</strong> Telefonnummer, E-Mail-Adresse</li>
-            <li><strong>Prozesssicherheit:</strong> Internetverkehrsdaten (Netzwerkbewegungen, IP-Adresse, Besuchsdaten, Zeit- und Datumsinformationen), Gerätename, In-App-Kaufhistorie, die Kennung für Werbetreibende, die in Ihrem Mobilgerät bezeichnet wird, das für den Zugriff auf unsere Dienste verwendet wird (wenn Sie Erlaubnis geben, The Identifier for Advertisers-IDFA), die Kennung für Anbieter/Entwickler, die in Ihrem Mobilgerät bezeichnet wird (The Identifier for Vendors-IDVF)</li>
-        </ul>
-
-        <p>Wir können Ihre oben genannten Daten direkt von Ihnen durch elektronische oder physische Medien, Ihr Mobilgerät, Drittanbieter-Anwendungen oder Drittanbieter-Quellen sammeln, durch die Sie auf unsere Anwendung zugreifen können, wie Apple App Store, Google Play App Store, Amazon App Store (ähnliche Plattformen zusammen mit "App Stores"), für die Zwecke der Einhaltung rechtlicher Verpflichtungen, Verbesserung unserer Dienste, Verwaltung Ihrer Nutzung unserer Dienste sowie um Ihnen zu ermöglichen, unsere Dienste zu genießen und einfach zu navigieren.</p>
-
-        <p>Wir können Ihre Protokolldaten sammeln, die während Sie unsere Dienste/Anwendungen nutzen (durch unsere Produkte oder Drittanbieter-Produkte) generiert werden. Diese Protokolldaten können Informationen wie die Internetprotokoll-Adresse ("IP") Ihres Geräts, Gerätename, Betriebssystemversion, die Konfiguration der App bei der Nutzung unseres Services/Anwendung, die Zeit/das Datum Ihrer Nutzung des Services/Anwendung und andere Statistiken enthalten.</p>
-
-        <h2>Wie wir Ihre Informationen verwenden</h2>
-        <p>Wir verwenden Ihre Informationen für eine Vielzahl von Geschäftszwecken, einschließlich der Bereitstellung unserer Dienste, für administrative Zwecke und zum Marketing unserer Produkte und Dienste, wie unten beschrieben.</p>
-
-        <h3>Bereitstellung unserer Dienste</h3>
-        <p>Wir verwenden Ihre Informationen, um unseren Vertrag mit Ihnen zu erfüllen und Ihnen unsere Dienste bereitzustellen, wie zum Beispiel:</p>
-        <ol>
-            <li>Bereitstellung von Antworten auf Ihre Textnachrichten und Suchanfragen und andere ähnliche Dienste;</li>
-            <li>Verwaltung Ihrer Informationen und Konten;</li>
-            <li>Zugang zu bestimmten Bereichen, Funktionalitäten und Funktionen unserer Dienste;</li>
-            <li>Beantwortung von Anfragen für Kunden- oder technischen Support;</li>
-            <li>Kommunikation mit Ihnen über Ihr Konto, Aktivitäten auf unseren Diensten und Richtlinienänderungen; und</li>
-            <li>Verarbeitung Ihrer Finanzinformationen und anderer Zahlungsmethoden für gekaufte Produkte oder Dienste.</li>
-        </ol>
-
-        <h3>Administrative Zwecke</h3>
-        <p>Wir verwenden Ihre Informationen für verschiedene administrative Zwecke, wie zum Beispiel:</p>
-        <ol>
-            <li>Verfolgung unserer berechtigten Interessen wie Direktmarketing, Forschung und Entwicklung (einschließlich Marketingforschung), Netzwerk- und Informationssicherheit und Betrugsprävention;</li>
-            <li>Erkennung von Sicherheitsvorfällen, Schutz vor böswilligen, betrügerischen oder illegalen Aktivitäten und Verfolgung der dafür Verantwortlichen;</li>
-            <li>Messung von Interesse und Engagement in unseren Diensten;</li>
-            <li>Kurzfristige, vorübergehende Nutzung, wie kontextbezogene Anpassung von Anzeigen;</li>
-            <li>Verbesserung, Upgrade oder Erweiterung unserer Dienste;</li>
-            <li>Entwicklung neuer Funktionen und Dienste;</li>
-            <li>Gewährleistung interner Qualitätskontrolle und Sicherheit;</li>
-            <li>Debugging, um Fehler in unseren Diensten zu identifizieren und zu reparieren;</li>
-        </ol>
-
-        <h3>Marketing und Werbung für unsere Produkte und Dienstleistungen</h3>
-        <p>Wir können personenbezogene Informationen verwenden, um Ihnen Inhalte und Anzeigen maßzuschneidern und bereitzustellen. Wir können Ihnen diese Materialien gemäß den anwendbaren Gesetzen zur Verfügung stellen. Einige der Wege, wie wir Ihnen Marketing zukommen lassen können, umfassen E-Mail-Kampagnen, Werbung für benutzerdefinierte Zielgruppen und "interessenbasierte" oder "personalisierte Werbung", einschließlich geräteübergreifendem Tracking.</p>
-
-        <div class="important">
-            <p>Wenn Sie Fragen zu unseren Marketingpraktiken haben oder wenn Sie die Nutzung Ihrer persönlichen Daten für Marketingzwecke ablehnen möchten, können Sie uns jederzeit wie in Abschnitt 15 unten beschrieben kontaktieren.</p>
-        </div>
-
-        <h3>Andere Zwecke</h3>
-        <p>Wir verwenden Ihre Informationen auch für andere Zwecke, die von Ihnen angefordert werden oder die durch anwendbares Recht gestattet sind.</p>
-        <ul>
-            <li><strong>Inhalte mit Freunden oder Kollegen teilen:</strong> Unsere Dienste können verschiedene Tools und Funktionalitäten bieten. Beispielsweise können wir Ihnen erlauben, Informationen über Ihre Freunde oder Kollegen durch unsere Empfehlungsdienste bereitzustellen. Unsere Empfehlungsdienste können es Ihnen ermöglichen, bestimmte Inhalte an einen Freund oder Kollegen weiterzuleiten oder zu teilen, wie eine E-Mail, die Ihren Freund einlädt, unsere Dienste zu nutzen.</li>
-        </ul>
-
-        <h2>Wie wir Ihre Informationen offenlegen</h2>
-        <p>Wir legen Ihre Informationen Dritten für eine Vielzahl von Geschäftszwecken offen, einschließlich der Bereitstellung unserer Dienste, zum Schutz von uns oder anderen oder im Falle eines größeren Geschäftsgeschäfts wie einer Fusion, eines Verkaufs oder einer Vermögensübertragung, wie unten beschrieben.</p>
-
-        <h3>Offenlegungen zur Bereitstellung unserer Dienste</h3>
-        <p>Die Kategorien von Dritten, mit denen wir Ihre Informationen teilen können, sind unten beschrieben:</p>
-        <ul>
-            <li><strong>Andere Benutzer oder Dritte:</strong> Wenn Sie die Dienste nutzen, können Sie wählen, personenbezogene Informationen oder Inhalte mit anderen Benutzern oder Dritten zu teilen. Darüber hinaus können bestimmte Aspekte Ihres Profils für andere Benutzer verfügbar sein.</li>
-            <li><strong>Dienstleister:</strong> Wir können Ihre persönlichen Daten mit unseren Drittanbieter-Dienstleistern teilen, die diese Informationen verwenden, um uns bei der Bereitstellung unserer Dienste zu helfen. Dies umfasst Dienstleister, die uns mit IT-Support, Hosting, Zahlungsabwicklung, Kundenservice und verwandten Dienstleistungen versorgen.</li>
-            <li><strong>Geschäftspartner:</strong> Wir können Ihre persönlichen Daten mit Geschäftspartnern teilen, um Ihnen ein von Ihnen angefordertes Produkt oder einen Service bereitzustellen. Wir können Ihre persönlichen Daten auch Geschäftspartnern mitteilen, mit denen wir gemeinsam Produkte oder Dienstleistungen anbieten.</li>
-            <li><strong>Werbe partner:</strong> Wir können Ihre persönlichen Daten, mit Ausnahme Ihrer biometrischen Daten, mit Drittanbieter-Werbepartnern teilen. Diese Drittanbieter-Werbepartner können Technologien und andere Tracking-Tools auf unseren Diensten setzen, um Informationen über Ihre Aktivitäten und Ihr Gerät zu sammeln (z.B. Ihre IP-Adresse, Cookie-Kennungen, besuchte Seite(n), Standort, Tageszeit). Diese Werbepartner können diese Informationen (und ähnliche Informationen, die von anderen Diensten gesammelt wurden) für die Lieferung personalisierter Anzeigen an Sie verwenden, wenn Sie digitale Eigenschaften innerhalb ihrer Netzwerke besuchen. Diese Praxis wird allgemein als "interessenbasierte Werbung" oder "personalisierten Werbung" bezeichnet.</li>
-            <li><strong>APIs/SDKs:</strong> Wir können Drittanbieter-Anwendungsprogrammierschnittstellen ("APIs") und Software Development Kits ("SDKs") als Teil der Funktionalität unserer Dienste verwenden. Für weitere Informationen über unsere Verwendung von APIs und SDKs kontaktieren Sie uns bitte wie unten angegeben.</li>
-        </ul>
-
-        <h3>Offenlegungen zum Schutz von uns oder anderen</h3>
-        <p>Wir können auf alle mit Ihnen verbundenen gespeicherten Informationen zugreifen, sie aufbewahren und offenlegen, wenn wir in gutem Glauben der Ansicht sind, dass dies erforderlich oder angemessen ist, um: Strafverfolgungs- oder nationale Sicherheitsanfragen und gerichtlichen Anordnungen nachzukommen, wie eine gerichtliche Anordnung oder Vorladung; Ihre, unsere oder andere Rechte, Eigentum oder Sicherheit zu schützen; unsere Richtlinien oder Verträge durchzusetzen; fällige Beträge einzuziehen; oder bei der Untersuchung oder Verfolgung von mutmaßlichen oder tatsächlichen illegalen Aktivitäten zu assistieren.</p>
-
-        <h2>Aufbewahrung personenbezogener Informationen</h2>
-        <p>Wir können die von uns gesammelten personenbezogenen Informationen, wie in dieser Datenschutzerklärung beschrieben, so lange speichern, wie Sie unsere Dienste nutzen, oder wie es notwendig ist, um den/die Zweck(e) zu erfüllen, für den/die sie gesammelt wurden, unsere Dienste bereitzustellen, Streitigkeiten beizulegen, rechtliche Verteidigungen aufzubauen, Audits durchzuführen, berechtigte Geschäftszwecke zu verfolgen, unsere Vereinbarungen durchzusetzen und anwendbaren Gesetzen zu entsprechen.</p>
-
-        <h2>Allgemeine Grundsätze zur Verarbeitung personenbezogener Daten</h2>
-        <p>Gemäß dieser Datenschutzrichtlinie werden personenbezogene Daten als Datenverantwortlicher in Übereinstimmung mit den hier genannten Grundprinzipien verarbeitet: (i) Übereinstimmung mit Gesetz und Treu und Glauben, (ii) Richtigkeit und, falls notwendig, Aktualität, (iii) Verarbeitung für bestimmte, ausdrückliche und legitime Zwecke, (iv) Beschränkung auf den Zweck, für den sie verarbeitet werden und Datenminimierung; und (v) Speicherung für den in der relevanten Gesetzgebung festgelegten Zeitraum oder wie für den Zweck der Verarbeitung erforderlich.</p>
-
-        <h2>Zwecke der Verarbeitung personenbezogener Daten und rechtliche Gründe</h2>
-        <p>Ihre personenbezogenen Daten werden auf automatischem oder nicht-automatischem Wege für die unten angegebenen Zwecke verarbeitet, in Übereinstimmung mit der anwendbaren Gesetzgebung und den Artikeln 5 und 6 des PDP-Gesetzes, wo es ausdrücklich durch die Gesetze erlaubt ist, die Erstellung eines Vertrags oder direkte Beziehung zur Ausführung oder Leistung des Vertrags und für die berechtigten Interessen von IMIKI AI, vorausgesetzt, dass Ihre Grundrechte und Freiheiten geschützt sind.</p>
-
-        <h3>Zwecke der Verarbeitung personenbezogener Daten Identitätsinformationen</h3>
-        <ul>
-            <li>Durchführung von Aktivitäten in Übereinstimmung mit der Gesetzgebung</li>
-            <li>Durchführung von Unternehmen/Produkt/Service-Verpflichtungsoperationen</li>
-        </ul>
-
-        <h3>Visuelle und audiovisuelle Aufzeichnungen</h3>
-        <ul>
-            <li>Durchführung von Vereinbarungsprozessen</li>
-            <li>Durchführung von Speicher- und Archivaktivitäten</li>
-            <li>Durchführung von Marketinganalyse-Studien</li>
-        </ul>
-
-        <h3>Rechtliche Gründe</h3>
-        <p>Gemäß diesem Text werden Ihre personenbezogenen Daten für die folgenden Zwecke in Übereinstimmung mit den oben genannten allgemeinen Bedingungen verarbeitet:</p>
-        <ul>
-            <li><strong>Identitätsinformationen, Kontaktinformationen, Visuelle und Audiovisuelle Aufzeichnungen:</strong> Es ist notwendig, Ihre personenbezogenen Daten zu verarbeiten, vorausgesetzt, wir stellen eine vertragliche Beziehung mit Ihnen her, oder sie steht in direktem Zusammenhang mit unserer Leistungspflicht, die sich aus diesem Vertrag ergibt. Wir müssen Daten verarbeiten, um ein Recht für Sie zu schaffen, dieses Recht auszuüben und zu schützen.</li>
-            <li><strong>Prozesssicherheit:</strong> Das Gesetz schreibt ausdrücklich den Prozess vor, durch den wir Ihre personenbezogenen Daten verarbeiten. Bedingungen, die notwendig sind, um unsere gesetzliche Verpflichtung zu erfüllen.</li>
-            <li><strong>Marketing-Daten:</strong> Ihre ausdrückliche Zustimmung.</li>
-        </ul>
-
-        <p>Darüber hinaus können die Zwecke der Verarbeitung personenbezogener Daten im Einklang mit unseren Verpflichtungen aus unseren Unternehmensrichtlinien und der Gesetzgebung aktualisiert werden; insbesondere:</p>
-        <ul>
-            <li>Erstellung von Benutzerkonten für die Dienstempfänger/Anwendungsbenutzer</li>
-            <li>Anpassung unserer Dienste, Verständnis unserer Benutzer und ihrer Präferenzen zur Verbesserung der Benutzererfahrung und des Genusses bei der Nutzung unserer Dienste und Verbesserung der Benutzererfahrung unserer Benutzer</li>
-            <li>Information über neue Produkte, Dienstleistungen und Anwendungen und Übermittlung von Informationen bezüglich Anzeigen und Werbeaktionen</li>
-            <li>Durchführung eines digitalen Abonnements und In-App-Kaufprozesse von Dienstempfängern</li>
-            <li>Durchführung der auto-erneuerbaren Abonnements, um Benutzern Zugang zu Inhalten, Dienstleistungen oder Premium-Funktionen in unserem Service zu geben</li>
-            <li>Durchführung der Prozesse der Informationssicherheit</li>
-            <li>Durchführung von Aktivitäten in Übereinstimmung mit der Gesetzgebung</li>
-            <li>Erfüllung der Anforderungen zuständiger Behörden</li>
-            <li>Durchführung der Prozesse von Finanz- und Buchhaltungstransaktionen</li>
-            <li>Durchführung von Kommunikationsaktivitäten</li>
-            <li>Durchführung der Prozesse von Verträgen</li>
-            <li>Durchführung von strategischen Planungsaktivitäten</li>
-            <li>Verfolgung von Anfragen und Beschwerden</li>
-        </ul>
-
-        <h2>Websites und Anwendungen von Drittanbietern</h2>
-        <p>Anwendungen können Links zu anderen Websites enthalten, die unbekannt sind und deren Inhalt nicht kontrolliert wird. Diese verlinkten Websites können andere Bedingungen und Konditionen enthalten als IMIKI AI-Texte. IMIKI AI kann nicht für die Nutzung oder Offenlegung von Informationen verantwortlich gemacht werden, die diese Websites möglicherweise verarbeiten. Ebenso hat IMIKI AI keine Verantwortung für Links von anderen Sites, die zu den IMIKI AI-Anwendungen von IMIKI AI bereitgestellt werden. Wir sammeln Informationen auf faire und rechtmäßige Weise, mit Ihrem Wissen und Ihrer Zustimmung. Wir lassen Sie auch wissen, warum wir sie sammeln und wie sie verwendet werden. Sie sind frei, unsere Anfrage nach diesen Informationen abzulehnen, in dem Verständnis, dass wir möglicherweise nicht in der Lage sind, Ihnen einige Ihrer gewünschten Dienste ohne sie bereitzustellen.</p>
-
-        <h2>Push-Benachrichtigungen</h2>
-        <p>IMIKI AI kann Ihnen gelegentlich Push-Benachrichtigungen über seine mobilen Anwendungen bezüglich Anwendungs-Upgrades oder Benachrichtigungen über unsere Dienste senden. Sie können solche Kommunikation und Benachrichtigungen immer über die Einstellungen auf Ihrem Gerät bearbeiten und den Empfang solcher Kommunikationen und Benachrichtigungen stoppen. Ihre Daten werden für die in der anwendbaren Gesetzgebung angegebene Dauer oder für eine angemessene Zeit gespeichert, bis der Zweck der Verarbeitung nicht mehr besteht, oder während gesetzlicher Verjährungsfristen. IMIKI AI kann Ihre personenbezogenen Daten auch nach Ablauf des Zwecks ihrer Verwendung speichern, sofern dies durch andere Gesetze erforderlich ist oder eine separate von Ihnen in dieser Hinsicht erteilte Erlaubnis vorliegt. In Fällen, in denen Sie IMIKI AI durch Ihre Zustimmung erlauben, Ihre personenbezogenen Daten für eine zusätzliche Zeit zu speichern, werden solche Daten unverzüglich nach Ablauf dieser zusätzlichen Zeit oder sobald der Zweck der Verarbeitung nicht mehr besteht, gelöscht, zerstört oder anonymisiert.</p>
-
-        <h2>Technische und administrative Maßnahmen</h2>
-        <p>Personenbezogene Daten werden gemäß der relevanten Gesetzgebung für die in der relevanten Gesetzgebung festgelegten Fristen oder wie für den Zweck der Verarbeitung erforderlich gespeichert. IMIKI AI verpflichtet sich, alle notwendigen technischen und administrativen Maßnahmen zu ergreifen und die gebotene Sorgfalt zu walten, um die Vertraulichkeit, Integrität und Sicherheit personenbezogener Daten zu gewährleisten. In diesem Zusammenhang ergreift es die notwendigen Maßnahmen, um eine unrechtmäßige Verarbeitung personenbezogener Daten, unbefugten Zugriff auf Daten, unrechtmäßige Offenlegung, Veränderung oder Zerstörung von Daten zu verhindern. Dementsprechend ergreift IMIKI AI die folgenden technischen und administrativen Maßnahmen bezüglich der von ihr verarbeiteten personenbezogenen Daten:</p>
-
-        <h3>Sicherheitsmaßnahmen umfassen:</h3>
-        <ul>
-            <li><strong>Informationssicherheitsbedrohungs- und Ereignismanagement:</strong> Ereignisse, die auf Servern und Firewalls auftreten, werden an das "Informationssicherheitsbedrohungs- und Ereignismanagement"-System übertragen. Dieses System alarmiert das verantwortliche Personal, wenn eine Sicherheitsbedrohung auftritt, und ermöglicht es ihnen, sofort auf die Bedrohung zu reagieren.</li>
-            <li><strong>Verschlüsselung:</strong> Sensible Daten werden mit kryptografischen Methoden gespeichert und falls erforderlich durch Umgebungen übertragen, die mit kryptografischen Methoden verschlüsselt sind, und kryptografische Schlüssel werden in sicheren und verschiedenen Umgebungen gespeichert.</li>
-            <li><strong>Protokollierung:</strong> Alle Transaktionsaufzeichnungen bezüglich sensibler Daten werden sicher protokolliert.</li>
-            <li><strong>Zwei-Faktor-Authentifizierung:</strong> Fernzugriff auf sensible Daten wird durch mindestens Zwei-Faktor-Authentifizierung erlaubt.</li>
-            <li><strong>Physische Datensicherheit:</strong> Es stellt sicher, dass personenbezogene Daten auf Papieren notwendigerweise in Schließfächern aufbewahrt und nur von autorisierten Personen zugänglich sind. Angemessene Sicherheitsmaßnahmen (für Situationen wie Stromlecks, Feuer, Überschwemmung, Diebstahl etc.) werden basierend auf der Natur der Umgebung, in der sensible Daten gespeichert werden, ergriffen.</li>
-            <li><strong>Vertraulichkeitsvereinbarung:</strong> Vertraulichkeitsvereinbarungen werden mit Mitarbeitern abgeschlossen, die an der Verarbeitung sensibler personenbezogener Daten teilnehmen.</li>
-        </ul>
-
-        <h3>Übertragung sensibler personenbezogener Daten</h3>
-        <p>Wenn eine Übertragung sensibler personenbezogener Daten per E-Mail erforderlich ist; erfolgt eine solche Übertragung durch (i) verschlüsselte Unternehmens-E-Mail oder (ii) Registered E-Mail. Für den Fall, dass die personenbezogenen Daten als Folge von Angriffen auf IMIKI AI-Apps oder auf das IMIKI AI-System beschädigt werden, obwohl IMIKI AI die notwendigen Informationssicherheitsmaßnahmen ergriffen hat, oder die personenbezogenen Daten von unbefugten Dritten erlangt werden, benachrichtigt IMIKI AI diese Situation sofort den Benutzern und gegebenenfalls die zuständige Datenschutzbehörde und ergreift notwendige Maßnahmen.</p>
-
-        <h2>Übertragung personenbezogener Daten an Dritte</h2>
-        <p>Die Verfahren und Grundsätze, die für die Übertragung personenbezogener Daten anzuwenden sind, sind in den Artikeln 8 und 9 des PDP-Gesetzes geregelt, und die persönlichen und besonderen Kategorien von Daten des Anbieters können an Dritte im Inland oder Ausland übertragen werden, da wir möglicherweise Server und Cloud-Systeme im Ausland nutzen. Ihre personenbezogenen Daten können aus folgenden Gründen ins Ausland übertragen werden:</p>
-        <ul>
-            <li>Durchführung von Speicher- und Archivaktivitäten</li>
-            <li>Durchführung von Geschäftsaktivitäten</li>
-            <li>Durchführung von After-Sales-Support-Services für Waren/Dienstleistungen</li>
-            <li>Verwaltung von Kundenbeziehungsmanagement-Prozessen</li>
-        </ul>
-
-        <p>Wir können Ihre personenbezogenen Daten auch an Dienstleister unseres Unternehmens, Dritte wie Facebook SDK, Adjust und Firebase Analytics, die in unseren Service eingebettet sind, aus folgenden Gründen übertragen:</p>
-        <ul>
-            <li>Weitergabe von Identitäts-, Kommunikations- und Transaktionssicherheitsinformationen an autorisierte öffentliche Institutionen und Organisationen zum Zweck der Durchführung von Aktivitäten in Übereinstimmung mit der Gesetzgebung, Überwachung und Durchführung rechtlicher Angelegenheiten, Information autorisierter Personen, Institutionen und Organisationen.</li>
-            <li>Weitergabe von Identitäts- und Kontaktinformationen zur Verwaltung von After-Sales-Support-Services, Durchführung von Geschäftsaktivitäten und Verwaltung von Kundenbeziehungsmanagement-Prozessen.</li>
-            <li>Weitergabe von Identitäts- und Kontaktinformationen durch den Benutzer an Drittanbieter-Anwendungen, die in die Anwendungen integriert sind, mit ausdrücklicher Zustimmung des Benutzers.</li>
-        </ul>
-
-        <h2>Personal</h2>
-        <p>Wenn Sie ein KI-Chat Plus-Mitarbeiter oder Bewerber sind, sammeln wir die Informationen, die Sie uns freiwillig zur Verfügung stellen. Wir verwenden die gesammelten Informationen für Personalzwecke, um Mitarbeitern Leistungen zu verwalten und Bewerber zu screenen.</p>
-
-        <p>Sie können uns kontaktieren, um (1) Ihre Informationen zu aktualisieren oder zu korrigieren, (2) Ihre Präferenzen bezüglich Kommunikation und anderen Informationen, die Sie von uns erhalten, zu ändern, oder (3) eine Aufzeichnung der Informationen zu erhalten, die wir über Sie haben. Solche Aktualisierungen, Korrekturen, Änderungen und Löschungen haben keine Auswirkung auf andere Informationen, die wir aufbewahren, oder Informationen, die wir vor einer solchen Aktualisierung, Korrektur, Änderung oder Löschung an Dritte gemäß dieser Datenschutzrichtlinie weitergegeben haben.</p>
-
-        <h2>Verkauf des Unternehmens</h2>
-        <p>Wir behalten uns das Recht vor, Informationen an einen Dritten im Falle eines Verkaufs, einer Fusion oder einer anderen Übertragung aller oder substantially aller Vermögenswerte von KI-Chat iOS oder eines seiner Corporate Affiliates (wie hierin definiert), oder jenes Teils von KI-Chat oder eines seiner Corporate Affiliates, auf den sich der Service bezieht, zu übertragen, oder falls wir unser Geschäft einstellen oder einen Antrag stellen oder gegen uns ein Antrag auf Insolvenz, Reorganisation oder ähnliches Verfahren eingereicht wird, vorausgesetzt, dass der Dritte sich bereit erklärt, an die Bedingungen dieser Datenschutzrichtlinie zu halten.</p>
-
-        <h2>Verbundene Unternehmen</h2>
-        <p>Wir können Informationen (einschließlich personenbezogener Informationen) über Sie an unsere Corporate Affiliates offenlegen. Für die Zwecke dieser Datenschutzrichtlinie bedeutet "Corporate Affiliate" jede Person oder Einheit, die direkt oder indirekt KI-Chat App kontrolliert, von KI-Chat App kontrolliert wird oder unter gemeinsamer Kontrolle mit KI-Chat App steht, sei es durch Eigentum oder anders. Alle Informationen bezüglich Ihrer Person, die wir unseren Corporate Affiliates zur Verfügung stellen, werden von diesen Corporate Affiliates gemäß den Bedingungen dieser Datenschutzrichtlinie behandelt.</p>
-
-        <h2>Ihre Zustimmung</h2>
-        <p>Durch die Nutzung von KI-Chat Android oder die direkte Kontaktaufnahme mit uns erklären Sie Ihre Annahme dieser Datenschutzrichtlinie. Wenn Sie dieser Datenschutzrichtlinie nicht zustimmen, sollten Sie nicht mit unserer Website interagieren oder unsere Dienste nutzen. Fortgesetzte Nutzung der Website, direkte Interaktion mit uns oder nach der Veröffentlichung von Änderungen an dieser Datenschutzrichtlinie, die die Nutzung oder Offenlegung Ihrer persönlichen Informationen nicht erheblich beeinflussen, bedeuten, dass Sie diese Änderungen akzeptieren.</p>
-
-        <p>Wir haben unsere Datenschutzrichtlinie aktualisiert, um Ihnen vollständige Transparenz darüber zu bieten, was festgelegt wird, wenn Sie unsere Seite besuchen und wie es verwendet wird. Durch die Nutzung unserer App, die Registrierung eines Kontos oder einen Kauf stimmen Sie hiermit unserer Datenschutzrichtlinie zu und akzeptieren ihre Bedingungen.</p>
-
-        <h2>Links zu anderen Websites</h2>
-        <p>Diese Datenschutzrichtlinie gilt nur für die Dienste. Die Dienste können Links zu anderen Websites enthalten, die nicht von KI-Chat betrieben oder kontrolliert werden. Wir sind nicht verantwortlich für den Inhalt, die Genauigkeit oder die auf solchen Websites geäußerten Meinungen, und solche Websites werden von uns nicht untersucht, überwacht oder auf Genauigkeit oder Vollständigkeit überprüft. Bitte denken Sie daran, dass wenn Sie einen Link verwenden, um von den Diensten zu einer anderen Website zu gelangen, unsere Datenschutzrichtlinie nicht mehr in Kraft ist. Ihr Surfverhalten und Ihre Interaktion auf einer anderen Website, einschließlich solcher, die einen Link auf unserer Plattform haben, unterliegen den eigenen Regeln und Richtlinien dieser Website. Solche Dritten können ihre eigenen Cookies oder andere Methoden verwenden, um Informationen über Sie zu sammeln.</p>
-
-        <h2>Cookies</h2>
-        <p>KI-Chat verwendet "Cookies", um die Bereiche unserer Website zu identifizieren, die Sie besucht haben. Ein Cookie ist ein kleines Stück Daten, das von Ihrem Webbrowser auf Ihrem Computer oder Mobilgerät gespeichert wird. Wir verwenden Cookies, um die Leistung und Funktionalität unserer App zu verbessern.</p>
-
-        <div class="contact-info">
-            <h2>Kontaktieren Sie uns</h2>
-            <p>Wenn Sie Fragen zu dieser Datenschutzrichtlinie haben oder weitere Informationen benötigen, kontaktieren Sie uns bitte über die folgenden Mittel:</p>
-            <p><strong>Email:</strong>help@imikilife.com<br>
-        </p></div>
-
-        <div class="footer">
-            <p>Diese Datenschutzrichtlinie wurde zuletzt aktualisiert: 2024</p>
-            <p>© 2024 IMIKI AI. Alle Rechte vorbehalten.</p>
-        </div>
-    </div>
-
-</body></html>
+    <script>
+        // Einfaches Skript für Sprachauswahl und reibungsloses Scrollen
+        document.addEventListener('DOMContentLoaded', function() {
+            // Reibungsloses Scrollen für Ankerlinks
+            const links = document.querySelectorAll('a[href^="#"]');
+            
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    if(this.getAttribute('href') === '#') return;
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        e.preventDefault();
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 20,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Druckfunktionalität hinzufügen
+            const header = document.querySelector('header');
+            const printButton = document.createElement('button');
+            printButton.innerHTML = '🖨️ Richtlinie drucken';
+            printButton.style.cssText = 'background: #3949ab; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; margin-top: 10px; font-size: 14px;';
+            printButton.addEventListener('click', () => window.print());
+            header.appendChild(printButton);
+            
+            // Aktive Sprachauswahl hervorheben
+            const currentPage = window.location.pathname;
+            const langButtons = document.querySelectorAll('.lang-btn');
+            
+            langButtons.forEach(btn => {
+                if(btn.getAttribute('href') === '#deutsch' || btn.getAttribute('href').includes('de')) {
+                    btn.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
